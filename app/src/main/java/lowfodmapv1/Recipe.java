@@ -1,12 +1,12 @@
 package lowfodmapv1;
-import java.util.Map;
+import java.util.HashMap;
 
 public class Recipe {
     private String name;
-    private Map<String, Integer> ingredients;
+    private HashMap<String, Integer> ingredients = new HashMap<>();
     private String instructions;
 
-    public Recipe(String name, Map<String, Integer> ingredients, String instructions) {
+    public Recipe(String name, HashMap<String, Integer> ingredients, String instructions) {
         this.name = name;
         this.ingredients = ingredients;
         this.instructions = instructions;
@@ -20,11 +20,11 @@ public class Recipe {
         this.name = name;
     }
 
-    public Map<String, Integer> getIngredients() {
+    public HashMap<String, Integer> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(Map<String, Integer> ingredients) {
+    public void setIngredients(HashMap<String, Integer> ingredients) {
         this.ingredients = ingredients;
     }
 
