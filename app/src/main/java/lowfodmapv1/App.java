@@ -8,7 +8,11 @@ public class App {
         return "Hello World!";
     }
 
+
+
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+        Recipe recipe = new Recipe("Meatball", null, "Cook them");
+        System.out.println(recipe.getName());
     }
 }
