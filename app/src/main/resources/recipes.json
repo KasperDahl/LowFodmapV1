@@ -1,0 +1,55 @@
+{
+    "recipes": [
+        {
+            "name": "Spaghetti Carbonara",
+            "category": "Pasta",
+            "ingredients": [
+                {"name": "Spaghetti", "quantity": 0.4, "unit": "kg"},
+                {"name": "Pancetta", "quantity": 0.1, "unit": "kg"},
+                {"name": "Eggs", "quantity": 3},
+                {"name": "Parmesan cheese", "quantity": 0.05, "unit": "kg"},
+                {"name": "Black pepper"},
+                {"name": "Salt"},
+                {"name": "Truffles"}
+            ],
+            "cooking_steps": [
+                "1. Cook spaghetti in a pot of salted boiling water until al dente.",
+                "2. Meanwhile, fry the pancetta in a pan until crispy.",
+                "3. In a mixing bowl, beat the eggs with grated Parmesan cheese, black pepper, and a pinch of salt.",
+                "4. Drain the spaghetti and add it to the pan with the pancetta. Toss until the spaghetti is coated with the fat.",
+                "5. Remove the pan from heat, let it cool for a minute, and then add the egg mixture to the spaghetti. Stir quickly to avoid scrambling the eggs.",
+                "6. Serve immediately with grated Parmesan cheese and shaved truffles, if using."
+            ],            
+            "total_time_minutes": 30,
+            "servings": 4,
+            "calories": 600,
+            "comments": "Truffles can be added for an extra touch of luxury."
+        },
+        {
+            "name": "Tomato Soup",
+            "category": "Soup",
+            "ingredients": [
+                {"name": "Tomatoes", "quantity": 1.5, "unit": "kg"},
+                {"name": "Onion", "quantity": 1},
+                {"name": "Garlic", "quantity": 3, "unit": "cloves"},
+                {"name": "Olive oil", "quantity": 2, "unit": "tbsp"},
+                {"name": "Chicken stock", "quantity": 1, "unit": "liter"},
+                {"name": "Bread", "quantity": 4, "unit": "slices"},
+                {"name": "Salt"},
+                {"name": "Black pepper"}
+            ],
+            "cooking_steps": [
+                "1. Preheat the oven to 180°C.",
+                "2. Cut the tomatoes and onion into wedges and place them on a baking tray. Crush the garlic and add it to the tray. Drizzle with olive oil and season with salt and black pepper.",
+                "3. Roast the vegetables in the oven for 30 minutes or until soft and slightly charred.",
+                "4. Transfer the roasted vegetables to a pot and add the chicken stock. Bring to a boil and simmer for 10 minutes.",
+                "5. Use an immersion blender to puree the soup until smooth. Alternatively, transfer the soup to a blender and puree in batches.",
+                "6. Toast the bread slices and cut them into croutons.",
+                "7. Serve the soup with the croutons on top."
+            ],            
+            "total_time_minutes": 50,
+            "servings": 6,
+            "calories": 200
+        }
+    ]
+}

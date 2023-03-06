@@ -21,13 +21,14 @@ public class App {
         ingredients2.put("Spelt", 200);
         ingredients2.put("Sausages", 400);
 
-        Recipe recipe1 = new Recipe("Meatball", ingredients1, "Cook them");
+       /*  Recipe recipe1 = new Recipe("Meatball", ingredients1, "Cook them");
         Recipe recipe2 = new Recipe("Meat Sandwich", ingredients2, "Cook them");
-
+ 
         List<Recipe> recipes = Arrays.asList(recipe1, recipe2);
         
         RecipeManager rp = new RecipeManager(recipes);        
 
-        System.out.println(rp.getAllIngredients());
+        System.out.println(rp.getAllIngredients()); 
+        */
     }
 }

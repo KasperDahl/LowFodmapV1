@@ -12,19 +12,6 @@ import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class Recipe {
-    private String name;
-    private String category;
-    private List<Ingredient> ingredients;
-    private List<String> cookingSteps;
-    private int prepTimeMinutes;
-    private int cookTimeMinutes;
-    private int totalTimeMinutes;
-    private int servings;
-    private int calories;
-
-    // Constructor, getters, and setters omitted for brevity
-}
 
 class RecipeReader {
     public static List<Recipe> readRecipesFromFile(String filePath) throws IOException {
