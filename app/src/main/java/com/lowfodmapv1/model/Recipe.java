@@ -1,4 +1,4 @@
-package lowfodmapv1.model;
+package com.lowfodmapv1.model;
 import java.util.List;
 
 // This class represents a single recipe with properties like name, instructions, 

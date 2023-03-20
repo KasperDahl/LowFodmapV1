@@ -1,4 +1,4 @@
-package lowfodmapv1.repository;
+package com.lowfodmapv1.repository;
 
 /* 
 This class acts as an interface for accessing the recipes stored in the JSON database. 

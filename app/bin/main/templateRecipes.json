@@ -8,9 +8,9 @@
         "unit": ""
       }
     ],
-    "NrOfPortions": 0,
+    "Servings": 0,
     "MealType": "",
-    "EntireMeal": false,
+    "FullMeal": false,
     "Calories": 0,
     "TimeToCook": "",
     "Comments": ""

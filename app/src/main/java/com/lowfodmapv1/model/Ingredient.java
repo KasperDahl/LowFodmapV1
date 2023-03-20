@@ -1,4 +1,4 @@
-package lowfodmapv1.model;
+package com.lowfodmapv1.model;
 
 /* 
 This class represents an ingredient with properties like name, quantity, and unit.

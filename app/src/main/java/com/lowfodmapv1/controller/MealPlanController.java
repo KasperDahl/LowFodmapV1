@@ -1,4 +1,4 @@
-package lowfodmapv1.controller;
+package com.lowfodmapv1.controller;
 
 /* 
 This class serves as a REST API controller for meal plan-related endpoints, 

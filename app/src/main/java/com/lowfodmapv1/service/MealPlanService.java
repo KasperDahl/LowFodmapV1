@@ -1,4 +1,4 @@
-package lowfodmapv1.service;
+package com.lowfodmapv1.service;
 
 /* 
 This class handles meal plan-related operations, such as creating a new meal plan, 

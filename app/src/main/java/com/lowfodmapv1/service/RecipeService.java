@@ -1,4 +1,4 @@
-package lowfodmapv1.service;
+package com.lowfodmapv1.service;
 
 /* 
 This class is responsible for handling recipe-related operations, such as loading the JSON database, 
