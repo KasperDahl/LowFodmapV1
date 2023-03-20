@@ -27,23 +27,8 @@ making it easier to switch between different storage methods (e.g., file, databa
         objectMapper = new ObjectMapper();
     }
 
-/*     /**
-     * Load recipes from the JSON file.
-     *
-     * @return List of Recipe objects.
-     * @throws IOException If there is an issue reading the file.
-     
-    public List<Recipe> loadRecipes() throws IOException {
-        File file = new File(RECIPES_JSON_FILE);     
 
-        if (!file.exists()) {
-            return new ArrayList<>();
-        }
-        CollectionType listType = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Recipe.class);
-        return objectMapper.readValue(file, listType);
-    } */
-
-        /**
+    /**
      * Load recipes from the JSON file.
      *
      * @return List of Recipe objects.
