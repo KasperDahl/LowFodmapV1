@@ -2,13 +2,15 @@ package com.lowfodmapv1.model;
 
 /* 
 This class represents an ingredient with properties like name, quantity, and unit.
- */
+ */ 
 
-public class Ingredient {
+ public class Ingredient {
     private String name;
     private double quantity;
     private String unit;
 
+    public Ingredient() {
+    }
 
     // perhaps I need multiple constructors if some of the fields are missing from the json recipes file
     public Ingredient(String name, double quantity, String unit) {
@@ -34,7 +36,7 @@ public class Ingredient {
     }
 
     public String getUnit() {
-        return unit;
+        return unit != null ? unit : "";
     }
 
     public void setUnit(String unit) {
