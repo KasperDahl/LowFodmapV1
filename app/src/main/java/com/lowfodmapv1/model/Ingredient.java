@@ -1,4 +1,8 @@
-package lowfodmapv1;
+package lowfodmapv1.model;
+
+/* 
+This class represents an ingredient with properties like name, quantity, and unit.
+ */
 
 public class Ingredient {
     private String name;

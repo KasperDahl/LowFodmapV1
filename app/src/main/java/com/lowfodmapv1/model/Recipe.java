@@ -1,20 +1,24 @@
-package lowfodmapv1;
+package lowfodmapv1.model;
 import java.util.List;
+
+// This class represents a single recipe with properties like name, instructions, 
+// ingredients, numberOfPortions, mealType, entireMeal, calories, timeToCook, and comments.
+
 
 public class Recipe {
     private String name;
-    private String category;
+    private String mealType;
     private List<Ingredient> ingredients;
-    private List<String> cookingSteps;
+    private List<String> instructions;
     private int totalTimeMinutes;
     private int servings;
 
-    public Recipe(String name, String category, List<Ingredient> ingredients,
-                  List<String> cookingSteps, int totalTimeMinutes, int servings) {
+    public Recipe(String name, String mealType, List<Ingredient> ingredients,
+                  List<String> instructions, int totalTimeMinutes, int servings) {
         this.name = name;
-        this.category = category;
+        this.mealType = mealType;
         this.ingredients = ingredients;
-        this.cookingSteps = cookingSteps;
+        this.instructions = instructions;
         this.totalTimeMinutes = totalTimeMinutes;
         this.servings = servings;
     }
@@ -27,12 +31,12 @@ public class Recipe {
         this.name = name;
     }
 
-    public String getCategory() {
-        return category;
+    public String getMealType() {
+        return mealType;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setMealType(String category) {
+        this.mealType = category;
     }
 
     public List<Ingredient> getIngredients() {
@@ -43,12 +47,12 @@ public class Recipe {
         this.ingredients = ingredients;
     }
 
-    public List<String> getCookingSteps() {
-        return cookingSteps;
+    public List<String> getInstructions() {
+        return instructions;
     }
 
-    public void setCookingSteps(List<String> cookingSteps) {
-        this.cookingSteps = cookingSteps;
+    public void setInstructions(List<String> cookingSteps) {
+        this.instructions = cookingSteps;
     }
 
     public int getTotalTimeMinutes() {

@@ -1,55 +1,72 @@
 {
     "recipes": [
         {
-            "name": "Spaghetti Carbonara",
-            "category": "Pasta",
-            "ingredients": [
-                {"name": "Spaghetti", "quantity": 0.4, "unit": "kg"},
-                {"name": "Pancetta", "quantity": 0.1, "unit": "kg"},
-                {"name": "Eggs", "quantity": 3},
-                {"name": "Parmesan cheese", "quantity": 0.05, "unit": "kg"},
-                {"name": "Black pepper"},
-                {"name": "Salt"},
-                {"name": "Truffles"}
+            "Name": "Low FODMAP Spaghetti Bolognese",
+            "Instructions": "1. Cook the gluten-free spaghetti according to the package instructions. 2. Heat garlic-infused oil in a pan, add green onion tops and sauté until softened. 3. Add ground beef and cook until browned. 4. Stir in canned tomatoes, diced carrots, zucchini, salt, pepper, and dried basil, and simmer for 20-25 minutes. 5. Serve the sauce over cooked gluten-free spaghetti and garnish with grated Parmesan cheese (optional).",
+            "Ingredients": [
+              {"name": "gluten-free spaghetti", "quantity": 500, "unit": "g"},
+              {"name": "garlic-infused oil", "quantity": 2, "unit": "tbsp"},
+              {"name": "green onion tops", "quantity": 1, "unit": "cup"},
+              {"name": "ground beef", "quantity": 500, "unit": "g"},
+              {"name": "canned tomatoes", "quantity": 400, "unit": "g"},
+              {"name": "diced carrots", "quantity": 1, "unit": "cup"},
+              {"name": "diced zucchini", "quantity": 1, "unit": "cup"},
+              {"name": "salt", "quantity": 1, "unit": "tsp"},
+              {"name": "pepper", "quantity": 0.5, "unit": "tsp"},
+              {"name": "dried basil", "quantity": 1, "unit": "tsp"},
+              {"name": "grated Parmesan cheese", "quantity": 100, "unit": "g"}
             ],
-            "cooking_steps": [
-                "1. Cook spaghetti in a pot of salted boiling water until al dente.",
-                "2. Meanwhile, fry the pancetta in a pan until crispy.",
-                "3. In a mixing bowl, beat the eggs with grated Parmesan cheese, black pepper, and a pinch of salt.",
-                "4. Drain the spaghetti and add it to the pan with the pancetta. Toss until the spaghetti is coated with the fat.",
-                "5. Remove the pan from heat, let it cool for a minute, and then add the egg mixture to the spaghetti. Stir quickly to avoid scrambling the eggs.",
-                "6. Serve immediately with grated Parmesan cheese and shaved truffles, if using."
-            ],            
-            "total_time_minutes": 30,
-            "servings": 4,
-            "calories": 600,
-            "comments": "Truffles can be added for an extra touch of luxury."
-        },
-        {
-            "name": "Tomato Soup",
-            "category": "Soup",
-            "ingredients": [
-                {"name": "Tomatoes", "quantity": 1.5, "unit": "kg"},
-                {"name": "Onion", "quantity": 1},
-                {"name": "Garlic", "quantity": 3, "unit": "cloves"},
-                {"name": "Olive oil", "quantity": 2, "unit": "tbsp"},
-                {"name": "Chicken stock", "quantity": 1, "unit": "liter"},
-                {"name": "Bread", "quantity": 4, "unit": "slices"},
-                {"name": "Salt"},
-                {"name": "Black pepper"}
+            "NrOfPortions": 4,
+            "MealType": "Dinner",
+            "EntireMeal": true,
+            "Calories": 630,
+            "TimeToCook": "45 minutes",
+            "Comments": "For a vegetarian option, you can replace the ground beef with canned lentils (rinsed and drained) or a low FODMAP veggie crumble. Ensure that all ingredients used are certified Low FODMAP."
+          },
+          {
+            "Name": "Low FODMAP Grilled Chicken Salad",
+            "Instructions": "1. Season chicken breasts with salt, pepper, and dried oregano. 2. Heat a grill or grill pan and cook chicken breasts for 5-6 minutes per side or until cooked through. 3. In a large bowl, mix together lettuce, cherry tomatoes, cucumber, bell pepper, and green onion tops. 4. Whisk together garlic-infused oil, lemon juice, and Dijon mustard for the dressing. 5. Slice the cooked chicken and add it to the salad. 6. Drizzle the dressing over the salad, and toss to combine.",
+            "Ingredients": [
+              {"name": "chicken breasts", "quantity": 2, "unit": "pc"},
+              {"name": "salt", "quantity": 0.5, "unit": "tsp"},
+              {"name": "pepper", "quantity": 0.5, "unit": "tsp"},
+              {"name": "dried oregano", "quantity": 1, "unit": "tsp"},
+              {"name": "lettuce", "quantity": 4, "unit": "cups"},
+              {"name": "cherry tomatoes", "quantity": 1, "unit": "cup"},
+              {"name": "cucumber", "quantity": 1, "unit": "pc"},
+              {"name": "bell pepper", "quantity": 1, "unit": "pc"},
+              {"name": "green onion tops", "quantity": 0.5, "unit": "cup"},
+              {"name": "garlic-infused oil", "quantity": 3, "unit": "tbsp"},
+              {"name": "lemon juice", "quantity": 2, "unit": "tbsp"},
+              {"name": "Dijon mustard", "quantity": 1, "unit": "tbsp"}
             ],
-            "cooking_steps": [
-                "1. Preheat the oven to 180°C.",
-                "2. Cut the tomatoes and onion into wedges and place them on a baking tray. Crush the garlic and add it to the tray. Drizzle with olive oil and season with salt and black pepper.",
-                "3. Roast the vegetables in the oven for 30 minutes or until soft and slightly charred.",
-                "4. Transfer the roasted vegetables to a pot and add the chicken stock. Bring to a boil and simmer for 10 minutes.",
-                "5. Use an immersion blender to puree the soup until smooth. Alternatively, transfer the soup to a blender and puree in batches.",
-                "6. Toast the bread slices and cut them into croutons.",
-                "7. Serve the soup with the croutons on top."
-            ],            
-            "total_time_minutes": 50,
-            "servings": 6,
-            "calories": 200
-        }
+            "NrOfPortions": 2,
+            "MealType": "Lunch",
+            "EntireMeal": true,
+            "Calories": 480,
+            "TimeToCook": "30 minutes",
+            "Comments": "You can customize this salad with other Low FODMAP vegetables or protein sources, such as grilled shrimp or tofu."
+          },
+          {
+            "Name": "Low FODMAP Lemon Polenta Cake",
+            "Instructions": "1. Preheat the oven to 350°F (180°C) and grease an 8-inch (20 cm) round cake pan. 2. In a large bowl, mix together almond meal, polenta, baking powder, and salt. 3. In another bowl, whisk together the eggs, sugar, and lemon zest. 4. Gradually add the dry ingredients to the egg mixture and mix until combined. 5. Pour the batter into the prepared cake pan and bake for 35-40 minutes, or until a toothpick inserted in the center comes out clean. 6. Allow the cake to cool in the pan before transferring it to a serving plate.",
+            "Ingredients": [
+              {"name": "almond meal", "quantity": 1.5, "unit": "cups"},
+              {"name": "polenta", "quantity": 0.5, "unit": "cup"},
+              {"name": "gluten-free baking powder", "quantity": 1, "unit": "tsp"},
+              {"name": "salt", "quantity": 0.25, "unit": "tsp"},
+              {"name": "eggs", "quantity": 3, "unit": "pc"},
+              {"name": "sugar", "quantity": 0.75, "unit": "cup"},
+              {"name": "lemon zest", "quantity": 2, "unit": "tbsp"}
+            ],
+            "NrOfPortions": 8,
+            "MealType": "Dessert",
+            "EntireMeal": false,
+            "Calories": 280,
+            "TimeToCook": "50 minutes",
+            "Comments": "For a zesty glaze, mix 0.5 cup of powdered sugar with 2-3 tbsp of fresh lemon juice and drizzle over the cooled cake."
+          }
+          
+          
     ]
 }
