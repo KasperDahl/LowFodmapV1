@@ -3,6 +3,7 @@ package com.lowfodmapv1.repository;
 import com.lowfodmapv1.model.Recipe;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
+import org.springframework.stereotype.Repository;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,8 +16,8 @@ This class acts as an interface for accessing the recipes stored in the JSON dat
 The repository pattern allows you to separate the data access logic from the application, 
 making it easier to switch between different storage methods (e.g., file, database) in the future.
  */
-
- public class RecipeRepository {
+@Repository
+public class RecipeRepository {
 
     private static final String RECIPES_JSON_FILE = "recipes.json";
     //private static final String RECIPES_JSON_FILE = "C:/LowFodmapV1/app/src/main/resources/recipes.json";
