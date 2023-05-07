@@ -1,4 +1,66 @@
-const AllRecipes = {
+async function loadSFC(url) {
+    const options = {
+      moduleCache: {
+        vue: Vue
+      },
+      getFile(url) {
+        return fetch(url).then((res) => res.text());
+      },
+      addStyle(styleStr) {
+        const style = document.createElement('style');
+        style.textContent = styleStr;
+        document.head.appendChild(style);
+      }
+    };
+  
+    return await window['vue3-sfc-loader'].loadModule(url, options);
+  }
+  
+  (async () => {
+    const Home = await loadSFC('./Home.vue');
+    const AllRecipes = await loadSFC('./AllRecipes.vue');
+  
+    const routes = [
+      { path: '/', component: Home },
+      { path: '/allrecipes', component: AllRecipes }
+    ];
+  
+    const router = VueRouter.createRouter({
+      history: VueRouter.createWebHashHistory(),
+      routes,
+    });
+  
+    const app = Vue.createApp({});
+    app.use(router);
+    app.mount('#app');
+  })();
+  
+
+
+
+/* // Import components from their respective files
+const Home = httpVueLoader('./Home.vue');
+const AllRecipes = httpVueLoader('./AllRecipes.vue');
+
+const routes = [
+  { path: '/', component: Home },
+  { path: '/allrecipes', component: AllRecipes },
+];
+
+const router = VueRouter.createRouter({
+  history: VueRouter.createWebHashHistory(),
+  routes,
+});
+
+const app = Vue.createApp({});
+app.use(router);
+app.mount('#app');
+ */
+
+
+
+
+/* const AllRecipes = {
     template: `
       <div>
         <h2>All Recipes</h2>
@@ -50,7 +112,7 @@ const AllRecipes = {
   });
   
   app.use(router);
-  app.mount("#app");
+  app.mount("#app"); */
   
 
 
