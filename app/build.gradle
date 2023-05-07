@@ -1,44 +1,12 @@
 plugins {
     id 'org.springframework.boot' version '2.5.6'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'java'
-    // Add the Gradle Node plugin
-    id 'com.github.node-gradle.node' version '3.1.0'
+    id 'java'    
 }
 
 group = 'com.lowfodmapv1'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
-
-node {
-  // Use the locally installed Node.js and npm versions
-  download = false
-}
-
-// Task to install frontend dependencies
-task installFrontend(type: NpmTask) {
-  // Update the working directory to 'src/main/resources/static'
-  workingDir = file('src/main/resources/static')
-  inputs.file('src/main/resources/static/package.json')
-  inputs.file('src/main/resources/static/package-lock.json')
-  outputs.dir('src/main/resources/static/node_modules')
-  args = ['install']
-}
-
-// Task to build the frontend
-task buildFrontend(type: NpmTask, dependsOn: installFrontend) {
-  // Update the working directory to 'src/main/resources/static'
-  workingDir = file('src/main/resources/static')
-  inputs.dir('src/main/resources/static')
-  outputs.dir('src/main/resources/static/dist')
-  args = ['run', 'build']
-}
-
-// Make the 'bootRun' task depend on the 'buildFrontend' task
-bootRun.dependsOn buildFrontend
-
-// Declare an explicit dependency between the 'processResources' and 'installFrontend' tasks
-processResources.dependsOn installFrontend
 
 repositories {
     mavenCentral()

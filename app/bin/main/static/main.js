@@ -1,4 +1,63 @@
-import { createApp } from 'vue';
+const AllRecipes = {
+    template: `
+      <div>
+        <h2>All Recipes</h2>
+        <ul>
+          <li v-for="recipe in recipes" :key="recipe.id">{{ recipe.name }}</li>
+        </ul>
+      </div>
+    `,
+    data() {
+      return {
+        recipes: [],
+      };
+    },
+    created() {
+      fetch("/api/recipes")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          this.recipes = data;
+        })
+        .catch((error) => {
+          console.error("Error fetching recipes:", error);
+        });
+    },
+  };
+  
+  const router = VueRouter.createRouter({
+    history: VueRouter.createWebHistory(),
+    routes: [
+      {
+        path: "/allrecipes",
+        component: AllRecipes,
+      },
+    ],
+  });
+  
+  const app = Vue.createApp({
+    template: `
+      <div>
+        <h1>Low FODMAP Recipes</h1>
+        <button class="btn btn-primary" @click="$router.push('/allrecipes')">Show all recipes</button>
+        <router-view></router-view>
+      </div>
+    `,
+  });
+  
+  app.use(router);
+  app.mount("#app");
+  
+
+
+
+
+
+/* import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 
@@ -9,7 +68,7 @@ const app = createApp(App);
 console.log('Initializing Vue.js app');
 app.use(router);
 app.mount('#app');
-console.log('Vue.js app initialized');
+console.log('Vue.js app initialized'); */
 
 
 
