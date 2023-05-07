@@ -1,0 +1,2 @@
+(()=>{const e=Vue.createApp({data(){return{recipes:[]}},methods:{showAllRecipes(){fetch("/api/recipes").then((e=>{if(!e.ok)throw new Error("HTTP error "+e.status);return e.json()})).then((e=>{this.recipes=e})).catch((e=>{console.error("Error fetching recipes:",e)}))}}});e.mount("#app")})();
+//# sourceMappingURL=app.2a58df31.js.map
