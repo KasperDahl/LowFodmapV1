@@ -9,9 +9,11 @@ const routes = [
   },
 ];
 
+
+console.log('Router created');
 const router = createRouter({
   history: createWebHistory(),
   routes,
 });
-
 export default router;
+

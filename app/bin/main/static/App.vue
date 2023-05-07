@@ -6,7 +6,13 @@
     </div>
   </template>
   
-  <script>
-  export default {};
-  </script>
+
+<script>
+  export default {
+    mounted() {
+      console.log('App component mounted');
+    },
+  };
+</script>
+
   

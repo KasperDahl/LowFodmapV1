@@ -1,4 +1,20 @@
-// Create a Vue instance
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+
+console.log('Creating app');
+
+const app = createApp(App);
+
+console.log('Initializing Vue.js app');
+app.use(router);
+app.mount('#app');
+console.log('Vue.js app initialized');
+
+
+
+
+/* // Create a Vue instance
 const app = Vue.createApp({
     // Data object to hold the state of the application
     data() {
@@ -36,3 +52,4 @@ const app = Vue.createApp({
 // Mount the Vue instance to the HTML element with the ID 'app'
 app.mount('#app');
 
+ */
