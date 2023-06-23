@@ -1,11 +1,13 @@
 <template>
-    <div>
-      <h2>All Recipes</h2>
-      <ul>        
-        <li v-for="recipe in recipes" :key="recipe.id">{{ recipe.name }}</li>
-      </ul>
-    </div>
-  </template>
+  <div>
+    <h2>All Recipes</h2>
+    <ul>        
+      <li v-for="recipe in recipes" :key="recipe.name">
+        <router-link :to="'/recipe/' + recipe.name">{{ recipe.name }}</router-link>
+      </li>
+    </ul>  
+  </div>
+</template>
   
 
   <script>  

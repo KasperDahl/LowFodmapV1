@@ -6,6 +6,7 @@ function loadRoutes(loadSFC) {
       { path: '/mealplan', component: () => loadSFC('./pages/MealPlan.vue') },
       { path: '/offers', component: () => loadSFC('./pages/Offers.vue') },
       { path: '/shoppinglist', component: () => loadSFC('./pages/ShoppingList.vue') },
+      { path: '/recipe/:name', component: () => loadSFC('./pages/RecipeDetail.vue') },
       // Add more routes here
     ];
   }
