@@ -1,5 +1,37 @@
 [
   {
+    "name": "Low FODMAP Testy McDish1",
+    "instructions": "...",
+    "ingredients": [
+      {"name": "gluten-free spaghetti", "quantity": 500, "unit": "g"},
+      {"name": "garlic-infused oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "green onion tops", "quantity": 1, "unit": "cup"},
+      {"name": "ground beef", "quantity": 500, "unit": "g"}
+    ],
+    "servings": 4,
+    "mealType": "Dinner",
+    "fullMeal": true,
+    "calories": 630,
+    "timeToCook": 45,
+    "comments": "For a vegetarian option, you can replace the ground beef with canned lentils (rinsed and drained) or a low FODMAP veggie crumble. Ensure that all ingredients used are certified Low FODMAP."
+  },
+  {
+    "name": "Low FODMAP Testy McDish2",
+    "instructions": "1. Cook the gluten-free spaghetti according to the package instructions. 2. Heat garlic-infused oil in a pan, add green onion tops and sauté until softened. 3. Add ground beef and cook until browned. 4. Stir in canned tomatoes, diced carrots, zucchini, salt, pepper, and dried basil, and simmer for 20-25 minutes. 5. Serve the sauce over cooked gluten-free spaghetti and garnish with grated Parmesan cheese (optional).",
+    "ingredients": [
+      {"name": "gluten-free spaghetti", "quantity": 400, "unit": "g"},
+      {"name": "garlic-infused oil", "quantity": 3, "unit": "tbsp"},      
+      {"name": "dried basil", "quantity": 1, "unit": "tsp"},
+      {"name": "grated Parmesan cheese", "quantity": 100, "unit": "g"}
+    ],
+    "servings": 4,
+    "mealType": "Dinner",
+    "fullMeal": true,
+    "calories": 630,
+    "timeToCook": 45,
+    "comments": "For a vegetarian option, you can replace the ground beef with canned lentils (rinsed and drained) or a low FODMAP veggie crumble. Ensure that all ingredients used are certified Low FODMAP."
+  },
+  {
     "name": "Low FODMAP Spaghetti Bolognese",
     "instructions": "1. Cook the gluten-free spaghetti according to the package instructions. 2. Heat garlic-infused oil in a pan, add green onion tops and sauté until softened. 3. Add ground beef and cook until browned. 4. Stir in canned tomatoes, diced carrots, zucchini, salt, pepper, and dried basil, and simmer for 20-25 minutes. 5. Serve the sauce over cooked gluten-free spaghetti and garnish with grated Parmesan cheese (optional).",
     "ingredients": [
