@@ -1,28 +1,27 @@
 async function loadSFC(url) {
   const options = {
     moduleCache: {
-      vue: Vue
+      vue: Vue,
     },
     getFile(url) {
       return fetch(url).then((res) => res.text());
     },
     addStyle(styleStr) {
-      const style = document.createElement('style');
+      const style = document.createElement("style");
       style.textContent = styleStr;
       document.head.appendChild(style);
     },
   };
 
-  return await window['vue3-sfc-loader'].loadModule(url, options);
+  return await window["vue3-sfc-loader"].loadModule(url, options);
 }
 
 (async () => {
-  const NavBar = await loadSFC('./components/NavBar.vue'); 
+  const NavBar = await loadSFC("./components/NavBar.vue");
   const router = initRouter(loadSFC);
 
   const app = Vue.createApp({});
-  app.component('nav-bar', NavBar); // Register the NavBar component globally
+  app.component("nav-bar", NavBar); // Register the NavBar component globally
   app.use(router);
-  app.mount('#app');
+  app.mount("#app");
 })();
-
