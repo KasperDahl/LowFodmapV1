@@ -5,7 +5,7 @@
     <div class="card mb-3">
       <div class="card-body">
         <h5 class="card-title">Instructions</h5>
-        <p class="card-text">{{ recipe.instructions }}</p>
+        <p class="card-text" v-html="formatInstructions(recipe.instructions)"></p>
       </div>
     </div>
 
@@ -18,7 +18,8 @@
             v-for="ingredient in recipe.ingredients"
             :key="ingredient.name"
           >
-            {{ ingredient.quantityString }} of {{ ingredient.name }}
+            {{ ingredient.name }}: {{ ingredient.quantityString }}
+            <!-- {{ ingredient.quantityString }} of {{ ingredient.name }} -->
           </li>
         </ul>
       </div>
@@ -65,6 +66,9 @@ export default {
         .then((data) => {
           this.recipe = data.find((recipe) => recipe.name === recipeName);
         });
+    },
+    formatInstructions(instructions) {
+      return instructions.replace(/\n/g, "<br>");
     },
   },
 };

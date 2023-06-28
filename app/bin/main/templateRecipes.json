@@ -1,18 +1,18 @@
 {
-    "Name": "",
-    "Instructions": "",
-    "Ingredients": [
+    "name": "",
+    "instructions": "",
+    "ingredients": [
       {
         "name": "",
         "quantity": 0,
         "unit": ""
       }
     ],
-    "Servings": 0,
-    "MealType": "",
-    "FullMeal": false,
-    "Calories": 0,
-    "TimeToCook": "",
-    "Comments": ""
+    "servings": 0,
+    "mealType": "",
+    "fullMeal": false,
+    "calories": 0,
+    "timeToCook": "",
+    "comments": ""
   }
   

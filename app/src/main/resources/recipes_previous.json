@@ -1,0 +1,356 @@
+[
+  {
+    "name": "Koldhævede speltboller",
+    "instructions": "1. Vej koldt vand og gær af i en skål, og rør gæren ud i vandet.\n2. Tilsæt speltmel, havregryn og salt og rør det sammen. Dejen er lidt tynd, men sådan skal den være. Har du ikke grovvalsede havregryn, kan du sagtens anvende de finvalsede.\n3. Dejen skal blot røres sammen med en grydeske - og ikke æltes yderligere.\n4. Dæk til med husholdningsfilm og et rent viskestykke og stil skålen i køleskabet natten over. Eller i ca. 10 timer.\n5. Om morgenen tages skålen med dejen ud af køleskabet, og og ovnen tændes på 250 grader varmluft. En bageplade beklædes med bagepapir, og med to spiseskeer laver du nu 12 boller på bagepladen. Pensl speltbollerne med lidt mælk.\n6. Bag din koldlhævede speltboller i ca. 20 minutter, hvor varmen i ovnen skrues ned til 200 grader efter ca. 5 minutter - hvorefter bollerne altså bages færdige i yderligere 15 minutter. Bagetiden afhænger naturligvis af hvor meget din ovn præcist varmer, så hold øje med speltbollerne i ovnen.",
+    "ingredients": [
+      {
+        "name": "vand",
+        "quantity": 5,
+        "unit": "dl"
+      },
+      {
+        "name": "gær",
+        "quantity": 15,
+        "unit": "gram"
+      },
+      {
+        "name": "speltmel",
+        "quantity": 500,
+        "unit": "gram"
+      },
+      {
+        "name": "havregryn",
+        "quantity": 50,
+        "unit": "gram"
+      },
+      {
+        "name": "salt",
+        "quantity": 10,
+        "unit": "gram"
+      },
+      {
+        "name": "mælk",
+        "quantity": "",
+        "unit": "lidt"
+      }
+    ],
+    "servings": 12,
+    "mealType": "bagning",
+    "fullMeal": false,
+    "calories": 0,
+    "timeToCook": 30,
+    "comments": ""
+  },
+  {
+    "name": "Low FODMAP Testy McDish1",
+    "instructions": "...",
+    "ingredients": [
+      {
+        "name": "gluten-free spaghetti",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "name": "garlic-infused oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "green onion tops",
+        "quantity": 1,
+        "unit": "cup"
+      },
+      {
+        "name": "ground beef",
+        "quantity": 500,
+        "unit": "g"
+      }
+    ],
+    "servings": 4,
+    "mealType": "Dinner",
+    "fullMeal": true,
+    "calories": 630,
+    "timeToCook": 45,
+    "comments": "For a vegetarian option, you can replace the ground beef with canned lentils (rinsed and drained) or a low FODMAP veggie crumble. Ensure that all ingredients used are certified Low FODMAP."
+  },
+  {
+    "name": "Low FODMAP Testy McDish2",
+    "instructions": "1. Cook the gluten-free spaghetti according to the package instructions. 2. Heat garlic-infused oil in a pan, add green onion tops and sauté until softened. 3. Add ground beef and cook until browned. 4. Stir in canned tomatoes, diced carrots, zucchini, salt, pepper, and dried basil, and simmer for 20-25 minutes. 5. Serve the sauce over cooked gluten-free spaghetti and garnish with grated Parmesan cheese (optional).",
+    "ingredients": [
+      {
+        "name": "gluten-free spaghetti",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "name": "garlic-infused oil",
+        "quantity": 3,
+        "unit": "tbsp"
+      },
+      {
+        "name": "dried basil",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "grated Parmesan cheese",
+        "quantity": 100,
+        "unit": "g"
+      }
+    ],
+    "servings": 4,
+    "mealType": "Dinner",
+    "fullMeal": true,
+    "calories": 630,
+    "timeToCook": 45,
+    "comments": "For a vegetarian option, you can replace the ground beef with canned lentils (rinsed and drained) or a low FODMAP veggie crumble. Ensure that all ingredients used are certified Low FODMAP."
+  },
+  {
+    "name": "Low FODMAP Spaghetti Bolognese",
+    "instructions": "1. Cook the gluten-free spaghetti according to the package instructions. 2. Heat garlic-infused oil in a pan, add green onion tops and sauté until softened. 3. Add ground beef and cook until browned. 4. Stir in canned tomatoes, diced carrots, zucchini, salt, pepper, and dried basil, and simmer for 20-25 minutes. 5. Serve the sauce over cooked gluten-free spaghetti and garnish with grated Parmesan cheese (optional).",
+    "ingredients": [
+      {
+        "name": "gluten-free spaghetti",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "name": "garlic-infused oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "green onion tops",
+        "quantity": 1,
+        "unit": "cup"
+      },
+      {
+        "name": "ground beef",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "name": "canned tomatoes",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "name": "diced carrots",
+        "quantity": 1,
+        "unit": "cup"
+      },
+      {
+        "name": "diced zucchini",
+        "quantity": 1,
+        "unit": "cup"
+      },
+      {
+        "name": "salt",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "pepper",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "dried basil",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "grated Parmesan cheese",
+        "quantity": 100,
+        "unit": "g"
+      }
+    ],
+    "servings": 4,
+    "mealType": "Dinner",
+    "fullMeal": true,
+    "calories": 630,
+    "timeToCook": 45,
+    "comments": "For a vegetarian option, you can replace the ground beef with canned lentils (rinsed and drained) or a low FODMAP veggie crumble. Ensure that all ingredients used are certified Low FODMAP."
+  },
+  {
+    "name": "Low FODMAP Grilled Chicken Salad",
+    "instructions": "1. Season chicken breasts with salt, pepper, and dried oregano. 2. Heat a grill or grill pan and cook chicken breasts for 5-6 minutes per side or until cooked through. 3. In a large bowl, mix together lettuce, cherry tomatoes, cucumber, bell pepper, and green onion tops. 4. Whisk together garlic-infused oil, lemon juice, and Dijon mustard for the dressing. 5. Slice the cooked chicken and add it to the salad. 6. Drizzle the dressing over the salad, and toss to combine.",
+    "ingredients": [
+      {
+        "name": "chicken breasts",
+        "quantity": 2,
+        "unit": "pc"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "pepper",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "dried oregano",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "lettuce",
+        "quantity": 4,
+        "unit": "cups"
+      },
+      {
+        "name": "cherry tomatoes",
+        "quantity": 1,
+        "unit": "cup"
+      },
+      {
+        "name": "cucumber",
+        "quantity": 1,
+        "unit": "pc"
+      },
+      {
+        "name": "bell pepper",
+        "quantity": 1,
+        "unit": "pc"
+      },
+      {
+        "name": "green onion tops",
+        "quantity": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "garlic-infused oil",
+        "quantity": 3,
+        "unit": "tbsp"
+      },
+      {
+        "name": "lemon juice",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Dijon mustard",
+        "quantity": 1,
+        "unit": "tbsp"
+      }
+    ],
+    "servings": 2,
+    "mealType": "Lunch",
+    "fullMeal": true,
+    "calories": 480,
+    "timeToCook": 30,
+    "comments": "You can customize this salad with other Low FODMAP vegetables or protein sources, such as grilled shrimp or tofu."
+  },
+  {
+    "name": "Low FODMAP Lemon Polenta Cake",
+    "instructions": "1. Preheat the oven to 350°F (180°C) and grease an 8-inch (20 cm) round cake pan. 2. In a large bowl, mix together almond meal, polenta, baking powder, and salt. 3. In another bowl, whisk together the eggs, sugar, and lemon zest. 4. Gradually add the dry ingredients to the egg mixture and mix until combined. 5. Pour the batter into the prepared cake pan and bake for 35-40 minutes, or until a toothpick inserted in the center comes out clean. 6. Allow the cake to cool in the pan before transferring it to a serving plate.",
+    "ingredients": [
+      {
+        "name": "almond meal",
+        "quantity": 1.5,
+        "unit": "cups"
+      },
+      {
+        "name": "polenta",
+        "quantity": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "gluten-free baking powder",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "name": "eggs",
+        "quantity": 3,
+        "unit": "pc"
+      },
+      {
+        "name": "sugar",
+        "quantity": 0.75,
+        "unit": "cup"
+      },
+      {
+        "name": "lemon zest",
+        "quantity": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "servings": 8,
+    "mealType": "Dessert",
+    "fullMeal": false,
+    "calories": 280,
+    "timeToCook": 50,
+    "comments": "For a zesty glaze, mix 0.5 cup of powdered sugar with 2-3 tbsp of fresh lemon juice and drizzle over the cooled cake."
+  },
+  {
+    "name": "Low FODMAP Vegetable Fried Rice",
+    "instructions": "1. Cook the rice according to package instructions and allow it to cool. 2. Heat a large skillet or wok over medium heat and add 2 tbsp of garlic-infused oil. 3. Stir-fry the bell pepper, zucchini, and carrots for 3-4 minutes until softened. 4. Add the cooked rice and green onion tops to the skillet, and cook for another 2-3 minutes, stirring frequently. 5. Push the rice and vegetables to one side of the skillet and add the remaining 1 tbsp of garlic-infused oil. 6. Whisk the eggs and pour them into the skillet, scrambling them until cooked. 7. Mix the scrambled eggs with the rice and vegetables, and add soy sauce, sesame oil, and salt. Stir to combine and cook for another 1-2 minutes.",
+    "ingredients": [
+      {
+        "name": "rice",
+        "quantity": 1,
+        "unit": "cup"
+      },
+      {
+        "name": "garlic-infused oil",
+        "quantity": 3,
+        "unit": "tbsp"
+      },
+      {
+        "name": "bell pepper",
+        "quantity": 1,
+        "unit": "pc"
+      },
+      {
+        "name": "zucchini",
+        "quantity": 1,
+        "unit": "pc"
+      },
+      {
+        "name": "carrots",
+        "quantity": 2,
+        "unit": "pc"
+      },
+      {
+        "name": "green onion tops",
+        "quantity": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "eggs",
+        "quantity": 2,
+        "unit": "pc"
+      },
+      {
+        "name": "gluten-free soy sauce",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "sesame oil",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.25,
+        "unit": "tsp"
+      }
+    ],
+    "servings": 4,
+    "mealType": "Lunch",
+    "fullMeal": true,
+    "calories": 420,
+    "timeToCook": 30,
+    "comments": "You can add other Low FODMAP vegetables like green beans or bok choy, or protein sources such as shrimp or tofu to make it more filling."
+  }
+]

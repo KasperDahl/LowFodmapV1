@@ -1,122 +1,230 @@
 [
   {
-    "name": "Low FODMAP Testy McDish1",
-    "instructions": "...",
+    "name": "Koldhævede speltboller",
+    "instructions": "1. Vej koldt vand og gær af i en skål, og rør gæren ud i vandet.\n2. Tilsæt speltmel, havregryn og salt og rør det sammen. Dejen er lidt tynd, men sådan skal den være. Har du ikke grovvalsede havregryn, kan du sagtens anvende de finvalsede.\n3. Dejen skal blot røres sammen med en grydeske - og ikke æltes yderligere.\n4. Dæk til med husholdningsfilm og et rent viskestykke og stil skålen i køleskabet natten over. Eller i ca. 10 timer.\n5. Om morgenen tages skålen med dejen ud af køleskabet, og og ovnen tændes på 250 grader varmluft. En bageplade beklædes med bagepapir, og med to spiseskeer laver du nu 12 boller på bagepladen. Pensl speltbollerne med lidt mælk.\n6. Bag din koldlhævede speltboller i ca. 20 minutter, hvor varmen i ovnen skrues ned til 200 grader efter ca. 5 minutter - hvorefter bollerne altså bages færdige i yderligere 15 minutter. Bagetiden afhænger naturligvis af hvor meget din ovn præcist varmer, så hold øje med speltbollerne i ovnen.",
     "ingredients": [
-      {"name": "gluten-free spaghetti", "quantity": 500, "unit": "g"},
-      {"name": "garlic-infused oil", "quantity": 2, "unit": "tbsp"},
-      {"name": "green onion tops", "quantity": 1, "unit": "cup"},
-      {"name": "ground beef", "quantity": 500, "unit": "g"}
+      {
+        "name": "vand",
+        "quantity": 5,
+        "unit": "dl"
+      },
+      {
+        "name": "gær",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "name": "speltmel",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "name": "havregryn",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "name": "salt",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "name": "mælk",
+        "quantity": "",
+        "unit": "lidt"
+      }
     ],
-    "servings": 4,
-    "mealType": "Dinner",
-    "fullMeal": true,
-    "calories": 630,
-    "timeToCook": 45,
-    "comments": "For a vegetarian option, you can replace the ground beef with canned lentils (rinsed and drained) or a low FODMAP veggie crumble. Ensure that all ingredients used are certified Low FODMAP."
-  },
-  {
-    "name": "Low FODMAP Testy McDish2",
-    "instructions": "1. Cook the gluten-free spaghetti according to the package instructions. 2. Heat garlic-infused oil in a pan, add green onion tops and sauté until softened. 3. Add ground beef and cook until browned. 4. Stir in canned tomatoes, diced carrots, zucchini, salt, pepper, and dried basil, and simmer for 20-25 minutes. 5. Serve the sauce over cooked gluten-free spaghetti and garnish with grated Parmesan cheese (optional).",
-    "ingredients": [
-      {"name": "gluten-free spaghetti", "quantity": 400, "unit": "g"},
-      {"name": "garlic-infused oil", "quantity": 3, "unit": "tbsp"},      
-      {"name": "dried basil", "quantity": 1, "unit": "tsp"},
-      {"name": "grated Parmesan cheese", "quantity": 100, "unit": "g"}
-    ],
-    "servings": 4,
-    "mealType": "Dinner",
-    "fullMeal": true,
-    "calories": 630,
-    "timeToCook": 45,
-    "comments": "For a vegetarian option, you can replace the ground beef with canned lentils (rinsed and drained) or a low FODMAP veggie crumble. Ensure that all ingredients used are certified Low FODMAP."
-  },
-  {
-    "name": "Low FODMAP Spaghetti Bolognese",
-    "instructions": "1. Cook the gluten-free spaghetti according to the package instructions. 2. Heat garlic-infused oil in a pan, add green onion tops and sauté until softened. 3. Add ground beef and cook until browned. 4. Stir in canned tomatoes, diced carrots, zucchini, salt, pepper, and dried basil, and simmer for 20-25 minutes. 5. Serve the sauce over cooked gluten-free spaghetti and garnish with grated Parmesan cheese (optional).",
-    "ingredients": [
-      {"name": "gluten-free spaghetti", "quantity": 500, "unit": "g"},
-      {"name": "garlic-infused oil", "quantity": 2, "unit": "tbsp"},
-      {"name": "green onion tops", "quantity": 1, "unit": "cup"},
-      {"name": "ground beef", "quantity": 500, "unit": "g"},
-      {"name": "canned tomatoes", "quantity": 400, "unit": "g"},
-      {"name": "diced carrots", "quantity": 1, "unit": "cup"},
-      {"name": "diced zucchini", "quantity": 1, "unit": "cup"},
-      {"name": "salt", "quantity": 1, "unit": "tsp"},
-      {"name": "pepper", "quantity": 0.5, "unit": "tsp"},
-      {"name": "dried basil", "quantity": 1, "unit": "tsp"},
-      {"name": "grated Parmesan cheese", "quantity": 100, "unit": "g"}
-    ],
-    "servings": 4,
-    "mealType": "Dinner",
-    "fullMeal": true,
-    "calories": 630,
-    "timeToCook": 45,
-    "comments": "For a vegetarian option, you can replace the ground beef with canned lentils (rinsed and drained) or a low FODMAP veggie crumble. Ensure that all ingredients used are certified Low FODMAP."
-  },
-  {
-    "name": "Low FODMAP Grilled Chicken Salad",
-    "instructions": "1. Season chicken breasts with salt, pepper, and dried oregano. 2. Heat a grill or grill pan and cook chicken breasts for 5-6 minutes per side or until cooked through. 3. In a large bowl, mix together lettuce, cherry tomatoes, cucumber, bell pepper, and green onion tops. 4. Whisk together garlic-infused oil, lemon juice, and Dijon mustard for the dressing. 5. Slice the cooked chicken and add it to the salad. 6. Drizzle the dressing over the salad, and toss to combine.",
-    "ingredients": [
-      {"name": "chicken breasts", "quantity": 2, "unit": "pc"},
-      {"name": "salt", "quantity": 0.5, "unit": "tsp"},
-      {"name": "pepper", "quantity": 0.5, "unit": "tsp"},
-      {"name": "dried oregano", "quantity": 1, "unit": "tsp"},
-      {"name": "lettuce", "quantity": 4, "unit": "cups"},
-      {"name": "cherry tomatoes", "quantity": 1, "unit": "cup"},
-      {"name": "cucumber", "quantity": 1, "unit": "pc"},
-      {"name": "bell pepper", "quantity": 1, "unit": "pc"},
-      {"name": "green onion tops", "quantity": 0.5, "unit": "cup"},
-      {"name": "garlic-infused oil", "quantity": 3, "unit": "tbsp"},
-      {"name": "lemon juice", "quantity": 2, "unit": "tbsp"},
-      {"name": "Dijon mustard", "quantity": 1, "unit": "tbsp"}
-    ],
-    "servings": 2,
-    "mealType": "Lunch",
-    "fullMeal": true,
-    "calories": 480,
-    "timeToCook": 30,
-    "comments": "You can customize this salad with other Low FODMAP vegetables or protein sources, such as grilled shrimp or tofu."
-  },
-  {
-    "name": "Low FODMAP Lemon Polenta Cake",
-    "instructions": "1. Preheat the oven to 350°F (180°C) and grease an 8-inch (20 cm) round cake pan. 2. In a large bowl, mix together almond meal, polenta, baking powder, and salt. 3. In another bowl, whisk together the eggs, sugar, and lemon zest. 4. Gradually add the dry ingredients to the egg mixture and mix until combined. 5. Pour the batter into the prepared cake pan and bake for 35-40 minutes, or until a toothpick inserted in the center comes out clean. 6. Allow the cake to cool in the pan before transferring it to a serving plate.",
-    "ingredients": [
-      {"name": "almond meal", "quantity": 1.5, "unit": "cups"},
-      {"name": "polenta", "quantity": 0.5, "unit": "cup"},
-      {"name": "gluten-free baking powder", "quantity": 1, "unit": "tsp"},
-      {"name": "salt", "quantity": 0.25, "unit": "tsp"},
-      {"name": "eggs", "quantity": 3, "unit": "pc"},
-      {"name": "sugar", "quantity": 0.75, "unit": "cup"},
-      {"name": "lemon zest", "quantity": 2, "unit": "tbsp"}
-    ],
-    "servings": 8,
-    "mealType": "Dessert",
+    "servings": 12,
+    "mealType": "Bagning",
     "fullMeal": false,
-    "calories": 280,
-    "timeToCook": 50,
-    "comments": "For a zesty glaze, mix 0.5 cup of powdered sugar with 2-3 tbsp of fresh lemon juice and drizzle over the cooled cake."
+    "calories": 0,
+    "timeToCook": 30,
+    "comments": ""
   },
   {
-    "name": "Low FODMAP Vegetable Fried Rice",
-    "instructions": "1. Cook the rice according to package instructions and allow it to cool. 2. Heat a large skillet or wok over medium heat and add 2 tbsp of garlic-infused oil. 3. Stir-fry the bell pepper, zucchini, and carrots for 3-4 minutes until softened. 4. Add the cooked rice and green onion tops to the skillet, and cook for another 2-3 minutes, stirring frequently. 5. Push the rice and vegetables to one side of the skillet and add the remaining 1 tbsp of garlic-infused oil. 6. Whisk the eggs and pour them into the skillet, scrambling them until cooked. 7. Mix the scrambled eggs with the rice and vegetables, and add soy sauce, sesame oil, and salt. Stir to combine and cook for another 1-2 minutes.",
+    "name": "Kylling svøbt i lufttørret skinke",
+    "instructions": "1. Skyl persillen, og fjern stilken.\n2. Fordel kyllingekødet i 8 ens portioner.\n3. På 1 skive skinke lægges persille og kyllingeinderfileter, krydr med friskkværnet peber.\n4. Rul skinken sammen om persille og kylling.\n5. De 8 ruller lægges i et smurt ovnfast fad.\n6. Steges i ovnen ved 200 grader i 15 minutter.",
     "ingredients": [
-      {"name": "rice", "quantity": 1, "unit": "cup"},
-      {"name": "garlic-infused oil", "quantity": 3, "unit": "tbsp"},
-      {"name": "bell pepper", "quantity": 1, "unit": "pc"},
-      {"name": "zucchini", "quantity": 1, "unit": "pc"},
-      {"name": "carrots", "quantity": 2, "unit": "pc"},
-      {"name": "green onion tops", "quantity": 0.5, "unit": "cup"},
-      {"name": "eggs", "quantity": 2, "unit": "pc"},
-      {"name": "gluten-free soy sauce", "quantity": 2, "unit": "tbsp"},
-      {"name": "sesame oil", "quantity": 1, "unit": "tsp"},
-      {"name": "salt", "quantity": 0.25, "unit": "tsp"}
+      {
+        "name": "kyllingeinderfilet",
+        "quantity": 450,
+        "unit": "g"
+      },
+      {
+        "name": "lufttørret skinke",
+        "quantity": 8,
+        "unit": "skiver"
+      },
+      {
+        "name": "persille",
+        "quantity": 1,
+        "unit": "bd"
+      },
+      {
+        "name": "friskkværnet peber",
+        "quantity": 1,
+        "unit": "knivspids"
+      },
+      {
+        "name": "Rapsolie",
+        "quantity": 0,
+        "unit": ""
+      }
     ],
     "servings": 4,
-    "mealType": "Lunch",
+    "mealType": "Hovedret",
+    "fullMeal": false,
+    "calories": 0,
+    "timeToCook": 15,
+    "comments": ""
+  },
+  {
+    "name": "Pasta med kødsauce",
+    "instructions": "1. Bacon svitses i en gryde, til det tager farve.\n2. Tilsæt hakket oksekød, salt og friskkværnet peber.\n3. De groftrevne gulerødder og porretoppe tilsættes, og der røres rundt.\n4. Hakkede tomater, peberfrugt i tern og krydderier tilsættes.\n5. Lad kødsaucen simre ved svag varme under låg i 1⁄2-1 time.\n6. Pasta koges efter anvisning på pakken.\n7. Server pasta med kødsauce og lidt reven parmesan og frisk basilikum.",
+    "ingredients": [
+      {
+        "name": "bacon",
+        "quantity": 75,
+        "unit": "g"
+      },
+      {
+        "name": "hakket oksekød, maks. 10 %",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "name": "porretoppe",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "name": "store gulerødder",
+        "quantity": 3,
+        "unit": "stk"
+      },
+      {
+        "name": "rød peberfrugt",
+        "quantity": 1,
+        "unit": "stk"
+      },
+      {
+        "name": "hakkede tomater",
+        "quantity": 2,
+        "unit": "ds"
+      },
+      {
+        "name": "tørret timian",
+        "quantity": 1,
+        "unit": "tsk"
+      },
+      {
+        "name": "tørret basilikum",
+        "quantity": 1,
+        "unit": "tsk"
+      },
+      {
+        "name": "tørret oregano",
+        "quantity": 1,
+        "unit": "tsk"
+      },
+      {
+        "name": "Salt og friskkværnet peber",
+        "quantity": 0,
+        "unit": ""
+      },
+      {
+        "name": "glutenfri pasta",
+        "quantity": 300,
+        "unit": "g"
+      }
+    ],
+    "servings": 4,
+    "mealType": "Hovedret",
     "fullMeal": true,
-    "calories": 420,
-    "timeToCook": 30,
-    "comments": "You can add other Low FODMAP vegetables like green beans or bok choy, or protein sources such as shrimp or tofu to make it more filling."
-  }      
+    "calories": 0,
+    "timeToCook": 60,
+    "comments": "Porretoppe kan udskiftes med top fra forårsløg. Serveres med friskrevet parmesanost og frisk, hakket basilikum"
+  },
+  {
+    "name": "Kødboller i tomatsauce",
+    "instructions": "Kødboller: \n1. Persille hakkes, og parmesanosten rives.\n2. Alle ingredienser til kødbollerne røres sammen.\n3. Lad farsen hvile, mens saucen tilberedes.\n4. Når saucen er lavet, skal kødbollerne formes valnøddestore. Der bliver ca. 10 stk.\n5. Kødbollerne vendes i parmesanost eller majsmel og steges i smør.\n6. Kødbollerne skal vendes tit for at få en jævn stegeskorpe.\n7. Kødbollerne serveres sammen med tomatsaucen og glutenfri pasta.\nTomatsauce: \n8. Peberfrugt vaskes, hakkes i mindre stykker og svitses i olie.\n9. Friske krydderurter hakkes fint.\n10. Salt, peber og krydderurter og flåede tomater tilsættes.\n11. Saucen koger 3-4 minutter og smages til.",
+    "ingredients": [
+      {
+        "name": "hakket kalvekød, magert",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "name": "æg",
+        "quantity": 1,
+        "unit": "stk"
+      },
+      {
+        "name": "persille",
+        "quantity": 1,
+        "unit": "dl"
+      },
+      {
+        "name": "parmesanost",
+        "quantity": 4,
+        "unit": "spsk"
+      },
+      {
+        "name": "majs- eller speltmel",
+        "quantity": 4,
+        "unit": "spsk"
+      },
+      {
+        "name": "laktosefri minimælk",
+        "quantity": 4,
+        "unit": "spsk"
+      },
+      {
+        "name": "salt",
+        "quantity": 2,
+        "unit": "tsk"
+      },
+      {
+        "name": "peber",
+        "quantity": 2,
+        "unit": "tsk"
+      },
+      {
+        "name": "revet parmesanost",
+        "quantity": 4,
+        "unit": "spsk"
+      },
+      {
+        "name": "smør til stegning",
+        "quantity": 0,
+        "unit": ""
+      },
+      {
+        "name": "rød peberfrugt",
+        "quantity": 1,
+        "unit": "stk"
+      },
+      {
+        "name": "olie",
+        "quantity": 1,
+        "unit": "spsk"
+      },
+      {
+        "name": "hakkede tomater",
+        "quantity": 1,
+        "unit": "ds"
+      },
+      {
+        "name": "friske krydderurter, for eksempel basilikum og persille",
+        "quantity": 0,
+        "unit": ""
+      }
+    ],
+    "servings": 4,
+    "mealType": "Hovedret",
+    "fullMeal": true,
+    "calories": 0,
+    "timeToCook": "70",
+    "comments": "Der kan bruges majsmel i stedet for parmesanost til panering. Denne ret kan deles op i kødboller og sauce. Se side 137-139 i LFD2 for mere information."
+  }
 ]
