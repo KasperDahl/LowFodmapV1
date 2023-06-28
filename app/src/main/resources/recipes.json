@@ -58,7 +58,7 @@
       {
         "name": "persille",
         "quantity": 1,
-        "unit": "bd"
+        "unit": "bundt"
       },
       {
         "name": "friskkværnet peber",
@@ -110,7 +110,7 @@
       {
         "name": "hakkede tomater",
         "quantity": 2,
-        "unit": "ds"
+        "unit": "dåse"
       },
       {
         "name": "tørret timian",
@@ -212,7 +212,7 @@
       {
         "name": "hakkede tomater",
         "quantity": 1,
-        "unit": "ds"
+        "unit": "dåse"
       },
       {
         "name": "friske krydderurter, for eksempel basilikum og persille",
@@ -226,5 +226,269 @@
     "calories": 0,
     "timeToCook": "70",
     "comments": "Der kan bruges majsmel i stedet for parmesanost til panering. Denne ret kan deles op i kødboller og sauce. Se side 137-139 i LFD2 for mere information."
+  },
+  {
+    "name": "Chili Con Carne med Mørk Chokolade",
+    "instructions": "1. Kog ris efter anvisning på pakken.\n2. Snit de grønne løgtoppe samt chili fint. Skær gulerødder i tern og peberfrugt i strimler.\n3. Svits løgtoppe og chili med hvidløgsolien ved høj varme i en gryde eller dyb pande.\n4. Kom oksekødet ved, og brun det.\n5. Tilsæt hakkede tomater, bouillon, kikærter, gulerødder og peberfrugter.\n6. Tilsæt spidskommen samt lidt salt og peber.\n7. Lad retten simre i minimum 1/2 time, men gerne et par timer.\n8. Smag til med salt, peber og eventuelt mere spidskommen.\n9. Tag gryden af varmen, tilsæt revet mørk chokolade, og rør rundt.\n10. Server med kogte ris, creme fraiche og eventuelt en sprød grøn salat.",
+    "ingredients": [
+      {
+        "name": "hvidløgsolie",
+        "quantity": 1,
+        "unit": "spsk"
+      },
+      {
+        "name": "frisk rød chili",
+        "quantity": 1,
+        "unit": "stk"
+      },
+      {
+        "name": "forårsløg",
+        "quantity": 1,
+        "unit": "bundt"
+      },
+      {
+        "name": "hakket oksekød (3-7 %)",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "name": "kikærter",
+        "quantity": 160,
+        "unit": "g"
+      },
+      {
+        "name": "gulerødder",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "name": "hakkede tomater",
+        "quantity": 1,
+        "unit": "dåse"
+      },
+      {
+        "name": "rød peberfrugt",
+        "quantity": 1,
+        "unit": "stk"
+      },
+      {
+        "name": "Salt og peber",
+        "quantity": 0,
+        "unit": ""
+      },
+      {
+        "name": "spidskommen",
+        "quantity": 1,
+        "unit": "tsk"
+      },
+      {
+        "name": "bouillon",
+        "quantity": 2,
+        "unit": "dl"
+      },
+      {
+        "name": "mørk chokolade",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "name": "ris",
+        "quantity": 2.5,
+        "unit": "dl"
+      },
+      {
+        "name": "creme fraiche (eventuelt laktosefri)",
+        "quantity": 2,
+        "unit": "dl"
+      }
+    ],
+    "servings": 4,
+    "mealType": "Hovedret",
+    "timeToCook": 90,
+    "calories": "",
+    "comments": "OBS! Retten skal simre i minimum 1/2 time, men gerne et par timer. Sorte bønner kan være et alternativ til kikærter. Gerne brune ris. \nTIPS: Ris kan erstattes med low FODMAP brød, majstortillachips eller dampede grøntsager. Du bør være opmærksom på, at både chili, kikærter og hakket tomat er begrænsede fødevarer, og du bør derfor holde igen med mængden af andre begrænsede fødevarer i dette måltid."
+  },
+  {
+    "name": "Boller i Karry",
+    "instructions": "1. Først forberedes kødbollefarsen. Kom de grønne løgtoppe i en skål, og blend dem til en grøn masse. Rør hakkekød sejt med 1 tsk. salt. Rør kød, de blendede forårsløg, æg og havregryn sammen. Sæt farsen på køl.\n2. Skræl gulerødder og skær dem i mindre stykker. Hak grønne løgtoppe, squash og hvidkål groft.\n3. Svits alle grøntsagerne i en opvarmet gryde med olie, samt karry og gurkemeje. Tilsæt 5 dl bouillon og lad grøntsagerne simre i ca. 10-15 min. Blend herefter grøntsagerne med en stavblender eller almindelig blender. Tilføj madlavningsfløde.\n4. Form kødbollerne med en ske, og kom dem direkte ned i grøntsagssovsen. Lad dem simre i 10-15 minutter.\n5. Kog imens ris efter anvisning på pakken.\n6. Smag til med salt, peber og eventuelt mere karry. Server med ris og friske krydderurter efter smag.",
+    "ingredients": [
+      {
+        "name": "hakket svinekød eller kalv og flæsk (3-7 %)",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "name": "æg",
+        "quantity": 1,
+        "unit": "stk"
+      },
+      {
+        "name": "havregryn",
+        "quantity": 1,
+        "unit": "dl"
+      },
+      {
+        "name": "forårsløg",
+        "quantity": 0.5,
+        "unit": "bundt"
+      },
+      {
+        "name": "hvidløgsolie",
+        "quantity": 2,
+        "unit": "spsk"
+      },
+      {
+        "name": "forårsløg",
+        "quantity": 0.5,
+        "unit": "bundt"
+      },
+      {
+        "name": "gulerødder",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "name": "hvidkål",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "name": "squash",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "name": "pink lady æble, lille",
+        "quantity": 1,
+        "unit": "stk"
+      },
+      {
+        "name": "karry",
+        "quantity": 3,
+        "unit": "tsk"
+      },
+      {
+        "name": "gurkemeje",
+        "quantity": 2,
+        "unit": "tsk"
+      },
+      {
+        "name": "bouillon",
+        "quantity": 5,
+        "unit": "dl"
+      },
+      {
+        "name": "madlavningsfløde",
+        "quantity": 1.5,
+        "unit": "dl"
+      },
+      {
+        "name": "salt og peber",
+        "quantity": "",
+        "unit": ""
+      },
+      {
+        "name": "ris",
+        "quantity": 3,
+        "unit": "dl"
+      }
+    ],
+    "servings": 4,
+    "mealType": "Hovedret",
+    "timeToCook": 80,
+    "calories": "",
+    "comments": "Gerne brune ris. \nTIP: Du kan anvende hakket kyllingekød i stedet for svinekød. Du kan også vælge andre low FODMAP grøntsager til sovsen. Halvdelen af det ene bundt forårsløg er til kødfarsen og den anden halvdel er til saucen."
+  },
+  {
+    "name": "Glutenfri Wraps med Krydret Oksekød",
+    "instructions": "1. Bland majsmel, kartoffelmel og salt i en skål.\n2. Tilsæt mælk imens du pisker dejen med en elpisker.\n3. Tilsæt herefter æg og pisk dejen grundigt sammen.\n4. Lad dejen hvile på køl i et kvarters tid, hvorefter du steger dine wraps som pandekager på en pande med lidt fedtstof. Der skal bruges ca. 1 dl dej pr pandekage.\n5. Varm olien i en gryde, og tilsæt oksekødet.\n6. Tilsæt stødt spidskommen, chili samt salt og peber.\n7. Steg kødet, til det er gennemstegt i omkring 15 minutter.\n8. Snit hvidkål fint, og riv gulerødderne groft.\n9. Skær peberfrugt og agurk i strimler.\n10. Alle grøntsager samles på et fad eller kommes i forskellige skåle.\n11. Server dine fuldkornswraps med de snittede grøntsager, krydret oksekød, revet ost, yoghurt og eventuelt en portion tomatsalsa fra side 306 i Sund Mave.",
+    "ingredients": [
+      {
+        "name": "fuldkornsmajsmel",
+        "quantity": 4,
+        "unit": "dl"
+      },
+      {
+        "name": "kartoffelmel",
+        "quantity": 4,
+        "unit": "tsk"
+      },
+      {
+        "name": "salt",
+        "quantity": 1,
+        "unit": "tsk"
+      },
+      {
+        "name": "minimælk",
+        "quantity": 4,
+        "unit": "dl"
+      },
+      {
+        "name": "æg",
+        "quantity": 5,
+        "unit": ""
+      },
+      {
+        "name": "fedtstof til stegning",
+        "quantity": 0,
+        "unit": ""
+      },
+      {
+        "name": "hakket oksekød (3-7 %)",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "name": "hvidløgsolie",
+        "quantity": 1,
+        "unit": "spsk"
+      },
+      {
+        "name": "spidskommen",
+        "quantity": 1,
+        "unit": "tsk"
+      },
+      {
+        "name": "frisk chili",
+        "quantity": 0.5,
+        "unit": ""
+      },
+      {
+        "name": "hvidkål",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "name": "gulerødder",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "name": "rød peberfrugt",
+        "quantity": 1,
+        "unit": "stk"
+      },
+      {
+        "name": "agurk",
+        "quantity": 0.5,
+        "unit": "stk"
+      },
+      {
+        "name": "revet mozzarella",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Skyr, creme fraiche eller yoghurt naturel",
+        "quantity": 3,
+        "unit": "dl"
+      }
+    ],
+    "servings": 4,
+    "mealType": "Hovedret",
+    "fullMeal": true,
+    "calories": 0,
+    "timeToCook": "",
+    "comments": "Frisk chili kan udskiftes med 1 tsk. tørrede chiliflager. TIP: Du kan vælge at fylde dine wraps med andet lækkert low FODMAP fyld. Prøv for eksempel en simpel version med gravad laks, rucola, friskost og low FODMAP pesto."
   }
 ]
