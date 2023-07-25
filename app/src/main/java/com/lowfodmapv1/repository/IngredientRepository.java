@@ -16,7 +16,7 @@ public class IngredientRepository {
     @Autowired
     private RecipeRepository recipeRepository;
 
-    public List<Ingredient> loadIngredients() {
+    public List<String> loadIngredients() {
         try {
             return recipeRepository.loadUniqueIngredients();
         } catch (IOException e) {

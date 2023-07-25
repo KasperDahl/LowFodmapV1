@@ -20,8 +20,8 @@ public class IngredientController {
     private IngredientRepository ingredientRepository;
 
     @GetMapping
-    public ResponseEntity<List<Ingredient>> getAllIngredients() {
-        List<Ingredient> ingredients = ingredientRepository.loadIngredients();
+    public ResponseEntity<List<String>> getAllIngredients() {
+        List<String> ingredients = ingredientRepository.loadIngredients();
         if (ingredients.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }

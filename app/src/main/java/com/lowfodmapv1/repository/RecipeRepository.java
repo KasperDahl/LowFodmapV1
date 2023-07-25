@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -59,17 +60,48 @@ public class RecipeRepository {
     }
 
     /**
-     * Load unique ingredients from all recipes in the JSON file.
+     * Load unique ingredient names from the JSON file.
      *
-     * @return List of unique Ingredient objects.
+     * @return List of unique ingredient names.
+     * @throws IOException If there is an issue reading the file.
      */
-    public List<Ingredient> loadUniqueIngredients() throws IOException {
-        List<Recipe> recipes = loadRecipes();
-        Set<Ingredient> ingredients = new HashSet<>();
-        for (Recipe recipe : recipes) {
-            ingredients.addAll(recipe.getIngredients());
+    public List<String> loadUniqueIngredients() throws IOException {
+        // Attempt to load the JSON file from the classpath
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(RECIPES_JSON_FILE);
+
+        // If the file doesn't exist, return an empty list
+        if (inputStream == null) {
+            return new ArrayList<>();
         }
-        return new ArrayList<>(ingredients);
+
+        // Construct a CollectionType object representing a list of Recipe objects
+        CollectionType listType = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Recipe.class);
+
+        // Use Jackson to parse the JSON file into a list of Recipe objects
+        List<Recipe> recipes = objectMapper.readValue(inputStream, listType);
+
+        // Initialize a set to store the unique ingredient names
+        Set<String> uniqueIngredientNames = new HashSet<>();
+
+        // Iterate through each recipe
+        for (Recipe recipe : recipes) {
+            // Iterate through each ingredient in the current recipe
+            for (Ingredient ingredient : recipe.getIngredients()) {
+                // Add the name of the ingredient to the set.
+                // Since a set automatically eliminates duplicates, only unique names will be
+                // stored.
+                uniqueIngredientNames.add(ingredient.getName());
+            }
+        }
+
+        // Convert the set of unique ingredient names to a list
+        List<String> uniqueIngredientNamesList = new ArrayList<>(uniqueIngredientNames);
+
+        // Sort the list of unique ingredient names
+        Collections.sort(uniqueIngredientNamesList);
+
+        // Return the sorted list
+        return uniqueIngredientNamesList;
     }
 
 }

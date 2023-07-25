@@ -66,7 +66,7 @@
         "unit": "knivspids"
       },
       {
-        "name": "Rapsolie",
+        "name": "rapsolie",
         "quantity": 0,
         "unit": ""
       }
@@ -128,7 +128,7 @@
         "unit": "tsk"
       },
       {
-        "name": "Salt og friskkværnet peber",
+        "name": "salt og friskkværnet peber",
         "quantity": 0,
         "unit": ""
       },
@@ -272,7 +272,7 @@
         "unit": "stk"
       },
       {
-        "name": "Salt og peber",
+        "name": "salt og peber",
         "quantity": 0,
         "unit": ""
       },
@@ -479,7 +479,7 @@
         "unit": "g"
       },
       {
-        "name": "Skyr, creme fraiche eller yoghurt naturel",
+        "name": "skyr, creme fraiche eller yoghurt naturel",
         "quantity": 3,
         "unit": "dl"
       }
