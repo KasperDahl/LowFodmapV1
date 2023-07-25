@@ -490,5 +490,186 @@
     "calories": 0,
     "timeToCook": "",
     "comments": "Frisk chili kan udskiftes med 1 tsk. tørrede chiliflager. TIP: Du kan vælge at fylde dine wraps med andet lækkert low FODMAP fyld. Prøv for eksempel en simpel version med gravad laks, rucola, friskost og low FODMAP pesto."
+  },
+  {
+    "name": "Sød Kartoffel og Grønne Bønner Stir-Fry med Kylling",
+    "instructions": "1. Skær kyllingebryst i mundrette stykker, skræl og skær den søde kartoffel i små tern, og trim de grønne bønner.\n2. Varm 1 spsk olivenolie i en stor pande over medium varme.\n3. Tilsæt kyllingestykkerne til panden og krydr med salt, peber, spidskommen og paprika. Kog indtil kyllingen er brunet og gennemstegt. Når det er gjort, sættes det til side.\n4. I den samme pande, tilsæt endnu en spsk olivenolie. Tilsæt sød kartoffel i tern og steg indtil de begynder at blive bløde.\n5. Tilsæt de grønne bønner og porregrønt til panden og fortsæt med at stege indtil grøntsagerne er møre.\n6. Returner den stegte kylling til panden og rør godt for at kombinere alle ingredienserne. Kog i et par minutter mere indtil alt er varmet igennem.\n7. Smag til med krydderier. Pynt med persille hvis du bruger det.\n8. Server varmt. Nyd din stir-fry!",
+    "ingredients": [
+      {
+        "name": "kyllingebryst",
+        "quantity": 2,
+        "unit": "stk"
+      },
+      {
+        "name": "sød kartoffel",
+        "quantity": 1,
+        "unit": "stk"
+      },
+      {
+        "name": "grønne bønner",
+        "quantity": 2,
+        "unit": "kopper"
+      },
+      {
+        "name": "olivenolie",
+        "quantity": 2,
+        "unit": "spsk"
+      },
+      {
+        "name": "salt og peber",
+        "quantity": 1,
+        "unit": ""
+      },
+      {
+        "name": "spidskommen",
+        "quantity": 1,
+        "unit": "tsk"
+      },
+      {
+        "name": "paprika",
+        "quantity": 1,
+        "unit": "tsk"
+      },
+      {
+        "name": "porregrønt",
+        "quantity": 1,
+        "unit": "spsk"
+      },
+      {
+        "name": "frisk persille",
+        "quantity": 1,
+        "unit": "spsk"
+      }
+    ],
+    "servings": 4,
+    "mealType": "Hovedret",
+    "fullMeal": true,
+    "calories": 0,
+    "timeToCook": 30,
+    "comments": "Frisk persille er valgfrit."
+  },
+  {
+    "name": "Spinat og Agurke Salat",
+    "instructions": "1. Skyl og dræn den friske babyspinat og placer den i en stor salatskål.\n2. Skær agurken og rød peber i tynde skiver.\n3. Tilsæt de agurk og rød peberfrugt til skålen.\n4. Drys den smuldrede fetaost over grøntsagerne.\n5. I en lille skål, pisk olivenolie, frisk citronsaft, salt og peber sammen for at lave dressingen.\n6. Hæld dressingen over salaten, og bland forsigtigt sammen.",
+    "ingredients": [
+      {
+        "name": "babyspinat",
+        "quantity": 120,
+        "unit": "gram"
+      },
+      {
+        "name": "medium agurk",
+        "quantity": 1,
+        "unit": "stk"
+      },
+      {
+        "name": "medium rød peberfrugt",
+        "quantity": 1,
+        "unit": "stk"
+      },
+      {
+        "name": "fetaost",
+        "quantity": 60,
+        "unit": "gram"
+      },
+      {
+        "name": "olivenolie",
+        "quantity": 2,
+        "unit": "spsk"
+      },
+      {
+        "name": "citronsaft",
+        "quantity": 1,
+        "unit": "spsk"
+      },
+      {
+        "name": "salt og peber",
+        "quantity": 1,
+        "unit": ""
+      }
+    ],
+    "servings": 4,
+    "mealType": "Salat",
+    "fullMeal": false,
+    "calories": 0,
+    "timeToCook": 15,
+    "comments": "Kan serveres sammen med Sød Kartoffel og Grønne Bønner Stir-Fry med Kylling."
+  },
+  {
+    "name": "Kylling Bacon Pasta Salat",
+    "instructions": "1. Kog pastaen: Når den er kogt, dræn og skyl pastaen under koldt vand og lad den køle ned.\n2. Steg kyllingen: Mens pastaen koger, krydr kyllingebrysterne med salt, peber, oregano og timian. Varm en spiseskefuld olivenolie i en pande over medium varme. Tilsæt kyllingen og steg i ca. 5-7 minutter på hver side, eller indtil den er gennemstegt og ikke længere er pink i midten. Når det er stegt, fjern kyllingen fra panden, lad den hvile i et par minutter, og skær den derefter i mundrette stykker.\n3. Steg baconen: I den samme pande, steg baconen indtil den er sprød. Når den er færdig, lad den køle på et papirhåndklæde, skær derefter i små stykker.\n4. Forbered grøntsagerne: Skær rød peber, agurk og cherrytomater i mundrette stykker. Hvis du bruger oliven, skal de skæres i halve.\n5. Saml salaten: I en stor skål, kombiner den afkølede pasta, stegt kylling, sprød bacon, hakket grøntsager, oliven og smuldret fetaost. Bland godt sammen.\n6. Salat dressing: Lav en salatdressing af eks. hvidløgsolie og eddikke og hæld udover salaten, og bland salaten igen.\n7. Afkøl og server: Du kan servere salaten med det samme, eller lad den køle i køleskabet i en time eller to for at lade smagene blande sig sammen. Det vil forblive velsmagende selv efter et par timer, så det er perfekt til at tage med på farten.",
+    "ingredients": [
+      {
+        "name": "kyllingebryst",
+        "quantity": 2,
+        "unit": "stk"
+      },
+      {
+        "name": "bacon",
+        "quantity": 100,
+        "unit": "gram"
+      },
+      {
+        "name": "pasta",
+        "quantity": 400,
+        "unit": "gram"
+      },
+      {
+        "name": "rød peberfrugt",
+        "quantity": 1,
+        "unit": "stk"
+      },
+      {
+        "name": "agurk",
+        "quantity": 1,
+        "unit": "stk"
+      },
+      {
+        "name": "cherrytomater",
+        "quantity": 10,
+        "unit": "stk"
+      },
+      {
+        "name": "oliven",
+        "quantity": 90,
+        "unit": "gram"
+      },
+      {
+        "name": "fetaost",
+        "quantity": 120,
+        "unit": "gram"
+      },
+      {
+        "name": "olivenolie",
+        "quantity": 2,
+        "unit": "spsk"
+      },
+      {
+        "name": "salt og peber",
+        "quantity": "",
+        "unit": ""
+      },
+      {
+        "name": "oregano",
+        "quantity": 1,
+        "unit": "spsk"
+      },
+      {
+        "name": "timian",
+        "quantity": 1,
+        "unit": "spsk"
+      },
+      {
+        "name": "low FODMAP salatdressing",
+        "quantity": 0.5,
+        "unit": "kop"
+      }
+    ],
+    "servings": 4,
+    "mealType": "Hovedret",
+    "fullMeal": true,
+    "calories": 0,
+    "timeToCook": 30,
+    "comments": "Husk at indtage denne ret i en passende portionsstørrelse for at holde sig inden for low FODMAP grænser, især vedrørende de anvendte grøntsager."
   }
 ]
