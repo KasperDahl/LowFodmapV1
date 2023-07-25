@@ -21,7 +21,6 @@
             v-for="ingredient in recipe.ingredients"
             :key="ingredient.name"
           >
-            <!-- {{ ingredient.name }}: {{ ingredient.quantityString }} -->
             {{ ingredient.quantityString }} {{ ingredient.name }}
           </li>
         </ul>
