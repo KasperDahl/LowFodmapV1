@@ -1,5 +1,6 @@
 package com.lowfodmapv1.repository;
 
+import com.lowfodmapv1.model.Ingredient;
 import com.lowfodmapv1.model.Recipe;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
@@ -9,7 +10,9 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /* 
 This class acts as an interface for accessing the recipes stored in the JSON database. 
@@ -20,14 +23,14 @@ making it easier to switch between different storage methods (e.g., file, databa
 public class RecipeRepository {
 
     private static final String RECIPES_JSON_FILE = "recipes.json";
-    //private static final String RECIPES_JSON_FILE = "C:/LowFodmapV1/app/src/main/resources/recipes.json";
-    
+    // private static final String RECIPES_JSON_FILE =
+    // "C:/LowFodmapV1/app/src/main/resources/recipes.json";
+
     private ObjectMapper objectMapper;
 
     public RecipeRepository() {
         objectMapper = new ObjectMapper();
     }
-
 
     /**
      * Load recipes from the JSON file.
@@ -54,4 +57,19 @@ public class RecipeRepository {
     public void saveRecipes(List<Recipe> recipes) throws IOException {
         objectMapper.writeValue(new File(RECIPES_JSON_FILE), recipes);
     }
+
+    /**
+     * Load unique ingredients from all recipes in the JSON file.
+     *
+     * @return List of unique Ingredient objects.
+     */
+    public List<Ingredient> loadUniqueIngredients() throws IOException {
+        List<Recipe> recipes = loadRecipes();
+        Set<Ingredient> ingredients = new HashSet<>();
+        for (Recipe recipe : recipes) {
+            ingredients.addAll(recipe.getIngredients());
+        }
+        return new ArrayList<>(ingredients);
+    }
+
 }
