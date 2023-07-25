@@ -52,7 +52,7 @@ This class represents an ingredient with properties like name, quantity, and uni
      * @return The formatted string representing the quantity and unit of the ingredient.
      */
     public String getQuantityString() {
-        return String.format("%.1f%s", quantity, unit);
+        return String.format("%.1f %s", quantity, unit);
     }
     
 

@@ -13,7 +13,7 @@
         <h2>Your Shopping List:</h2>
         <ul>
           <li v-for="ingredient in shoppingList" :key="ingredient.name">
-            {{ ingredient.name }}: {{ ingredient.quantityString }}
+            {{ ingredient.quantityString }} {{ ingredient.name }}
             <button @click="removeIngredient(ingredient)">Remove</button>
           </li>
         </ul>
@@ -47,12 +47,12 @@ export default {
           if (shoppingList[ingredient.name]) {
             shoppingList[ingredient.name].quantity += ingredient.quantity;
             shoppingList[ingredient.name].quantityString =
-              shoppingList[ingredient.name].quantity + ingredient.unit;
+              shoppingList[ingredient.name].quantity + " " + ingredient.unit;
           } else {
             shoppingList[ingredient.name] = {
               ...ingredient,
               quantity: ingredient.quantity,
-              quantityString: ingredient.quantity + ingredient.unit,
+              quantityString: ingredient.quantity + " " + ingredient.unit,
             };
           }
         }
