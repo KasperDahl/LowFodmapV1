@@ -61,7 +61,7 @@
         "unit": "bundt"
       },
       {
-        "name": "friskkværnet peber",
+        "name": "peber",
         "quantity": 1,
         "unit": "knivspids"
       },
@@ -88,7 +88,7 @@
         "unit": "g"
       },
       {
-        "name": "hakket oksekød, maks. 10 %",
+        "name": "hakket oksekød",
         "quantity": 400,
         "unit": "g"
       },
@@ -98,7 +98,7 @@
         "unit": "g"
       },
       {
-        "name": "store gulerødder",
+        "name": "gulerødder",
         "quantity": 3,
         "unit": "stk"
       },
@@ -128,12 +128,12 @@
         "unit": "tsk"
       },
       {
-        "name": "salt og friskkværnet peber",
+        "name": "salt og peber",
         "quantity": 0,
         "unit": ""
       },
       {
-        "name": "glutenfri pasta",
+        "name": "pasta",
         "quantity": 300,
         "unit": "g"
       }
@@ -150,7 +150,7 @@
     "instructions": "Kødboller: \n1. Persille hakkes, og parmesanosten rives.\n2. Alle ingredienser til kødbollerne røres sammen.\n3. Lad farsen hvile, mens saucen tilberedes.\n4. Når saucen er lavet, skal kødbollerne formes valnøddestore. Der bliver ca. 10 stk.\n5. Kødbollerne vendes i parmesanost eller majsmel og steges i smør.\n6. Kødbollerne skal vendes tit for at få en jævn stegeskorpe.\n7. Kødbollerne serveres sammen med tomatsaucen og glutenfri pasta.\nTomatsauce: \n8. Peberfrugt vaskes, hakkes i mindre stykker og svitses i olie.\n9. Friske krydderurter hakkes fint.\n10. Salt, peber og krydderurter og flåede tomater tilsættes.\n11. Saucen koger 3-4 minutter og smages til.",
     "ingredients": [
       {
-        "name": "hakket kalvekød, magert",
+        "name": "hakket kalvekød",
         "quantity": 400,
         "unit": "g"
       },
@@ -175,7 +175,7 @@
         "unit": "spsk"
       },
       {
-        "name": "laktosefri minimælk",
+        "name": "minimælk",
         "quantity": 4,
         "unit": "spsk"
       },
@@ -190,7 +190,7 @@
         "unit": "tsk"
       },
       {
-        "name": "revet parmesanost",
+        "name": "parmesanost",
         "quantity": 4,
         "unit": "spsk"
       },
@@ -215,7 +215,7 @@
         "unit": "dåse"
       },
       {
-        "name": "friske krydderurter, for eksempel basilikum og persille",
+        "name": "friske krydderurter",
         "quantity": 0,
         "unit": ""
       }
@@ -225,7 +225,7 @@
     "fullMeal": true,
     "calories": 0,
     "timeToCook": "70",
-    "comments": "Der kan bruges majsmel i stedet for parmesanost til panering. Denne ret kan deles op i kødboller og sauce. Se side 137-139 i LFD2 for mere information."
+    "comments": "Der kan bruges majsmel i stedet for parmesanost til panering. Denne ret kan deles op i kødboller og sauce. Friske krydderurter kan eksempelvis være basilikum og persille. Se side 137-139 i LFD2 for mere information."
   },
   {
     "name": "Chili Con Carne med Mørk Chokolade",
@@ -237,7 +237,7 @@
         "unit": "spsk"
       },
       {
-        "name": "frisk rød chili",
+        "name": "frisk chili",
         "quantity": 1,
         "unit": "stk"
       },
@@ -247,7 +247,7 @@
         "unit": "bundt"
       },
       {
-        "name": "hakket oksekød (3-7 %)",
+        "name": "hakket oksekød",
         "quantity": 400,
         "unit": "g"
       },
@@ -297,7 +297,7 @@
         "unit": "dl"
       },
       {
-        "name": "creme fraiche (eventuelt laktosefri)",
+        "name": "creme fraiche",
         "quantity": 2,
         "unit": "dl"
       }
@@ -306,7 +306,7 @@
     "mealType": "Hovedret",
     "timeToCook": 90,
     "calories": "",
-    "comments": "OBS! Retten skal simre i minimum 1/2 time, men gerne et par timer. Sorte bønner kan være et alternativ til kikærter. Gerne brune ris. \nTIPS: Ris kan erstattes med low FODMAP brød, majstortillachips eller dampede grøntsager. Du bør være opmærksom på, at både chili, kikærter og hakket tomat er begrænsede fødevarer, og du bør derfor holde igen med mængden af andre begrænsede fødevarer i dette måltid."
+    "comments": "OBS! Retten skal simre i minimum 1/2 time, men gerne et par timer. Brug gerne rød frisk chili. Sorte bønner kan være et alternativ til kikærter. Gerne brune ris. \nTIPS: Ris kan erstattes med low FODMAP brød, majstortillachips eller dampede grøntsager. Du bør være opmærksom på, at både chili, kikærter og hakket tomat er begrænsede fødevarer, og du bør derfor holde igen med mængden af andre begrænsede fødevarer i dette måltid."
   },
   {
     "name": "Boller i Karry",
@@ -434,7 +434,7 @@
         "unit": ""
       },
       {
-        "name": "hakket oksekød (3-7 %)",
+        "name": "hakket oksekød",
         "quantity": 400,
         "unit": "g"
       },
@@ -558,12 +558,12 @@
         "unit": "gram"
       },
       {
-        "name": "medium agurk",
+        "name": "agurk",
         "quantity": 1,
         "unit": "stk"
       },
       {
-        "name": "medium rød peberfrugt",
+        "name": "rød peberfrugt",
         "quantity": 1,
         "unit": "stk"
       },
@@ -660,7 +660,7 @@
         "unit": "spsk"
       },
       {
-        "name": "low FODMAP salatdressing",
+        "name": "salatdressing",
         "quantity": 0.5,
         "unit": "kop"
       }
