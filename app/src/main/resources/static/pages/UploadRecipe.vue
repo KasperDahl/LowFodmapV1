@@ -9,6 +9,7 @@
           type="text"
           id="name"
           v-model="recipe.name"
+          class="form-control"
           required
         />
       </div>
@@ -19,17 +20,21 @@
         <div
           v-for="(instruction, index) in instructions"
           :key="index"
+          class="form-group"
         >
-          <p
+          <div
             v-if="instruction.edit"
-            style="background-color: #f5f5f5; padding: 10px"
+            class="input-group mb-3"
           >
-            Step {{ index + 1 }}:
+            <span class="input-group-text">
+              Step {{ index + 1 }}:
+            </span>
             <input
               type="text"
               v-model="instruction.text"
-              style="width: 60%"
+              class="form-control"
             />
+
             <button
               @click="addEdit(index, 'instructions')"
               class="btn btn-primary"
@@ -45,7 +50,7 @@
             >
               Remove
             </button>
-          </p>
+          </div>
           <p
             v-else
             style="background-color: #f5f5f5; padding: 10px"
@@ -76,29 +81,32 @@
         <div
           v-for="(ingredient, index) in ingredients"
           :key="'ingredient' + index"
+          class="form-group"
         >
-          <p
+
+          <div
             v-if="ingredient.edit"
-            style="background-color: #f5f5f5; padding: 10px"
+            class="input-group mb-3"
           >
-            Name:
+            <span class="input-group-text">Name:</span>
             <input
               type="text"
               v-model="ingredient.name"
-              style="width: 30%"
+              class="form-control"
             />
-            Quantity:
+            <span class="input-group-text">Quantity:</span>
             <input
               type="number"
               v-model="ingredient.quantity"
-              style="width: 8%"
+              class="form-control"
             />
-            Unit:
+            <span class="input-group-text">Unit:</span>
             <input
               type="text"
               v-model="ingredient.unit"
-              style="width: 10%"
+              class="form-control"
             />
+
             <button
               @click="addEdit(index, 'ingredients')"
               class="btn btn-primary"
@@ -114,7 +122,7 @@
             >
               Remove
             </button>
-          </p>
+          </div>
           <p
             v-else
             style="background-color: #f5f5f5; padding: 10px"
