@@ -16,12 +16,14 @@
 
       <!-- Implementation for Instructions -->
       <div class="instructions">
-        <h2>Instructions</h2>
+        <label for="instructions">Instructions</label>
         <div
           v-for="(instruction, index) in instructions"
           :key="index"
           class="form-group"
         >
+
+          <!-- 'Edit' state for instructions -->
           <div
             v-if="instruction.edit"
             class="input-group mb-3"
@@ -34,56 +36,59 @@
               v-model="instruction.text"
               class="form-control"
             />
-
-            <button
-              @click="addEdit(index, 'instructions')"
-              class="btn btn-primary"
-              style="margin-left: 5px; float: right"
-            >
-              Add
-            </button>
-            <button
-              @click="remove(index, 'instructions')"
-              class="btn btn-primary"
-              style="margin-left: 5px; float: right"
-              :disabled="instructions.length === 1"
-            >
-              Remove
-            </button>
+            <div style="display: flex; justify-content: flex-end; gap: 5px;">
+              <button
+                @click="addEdit(index, 'instructions')"
+                class="btn btn-primary"
+              >
+                Add
+              </button>
+              <button
+                @click="remove(index, 'instructions')"
+                class="btn btn-primary"
+                :disabled="instructions.length === 1"
+              >
+                Remove
+              </button>
+            </div>
           </div>
-          <p
+
+          <!-- 'Display' state for instructions -->
+          <div
             v-else
-            style="background-color: #f5f5f5; padding: 10px"
+            style="background-color: #f5f5f5; padding: 3px; display: flex; justify-content: space-between; align-items: flex-start;"
           >
-            Step {{ index + 1 }}: {{ instruction.text }}
-            <button
-              @click="edit(index, 'instructions')"
-              class="btn btn-primary"
-              style="float: right; margin-left: 5px"
-            >
-              Edit
-            </button>
-            <button
-              @click="remove(index, 'instructions')"
-              class="btn btn-primary"
-              style="margin-left: 5px; float: right"
-              :disabled="instructions.length === 1"
-            >
-              Remove
-            </button>
-          </p>
+            <div style="flex-grow: 1; margin-right: 10px;">
+              <span>Step {{ index + 1 }}: {{ instruction.text }}</span>
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 5px;">
+              <button
+                @click="edit(index, 'instructions')"
+                class="btn btn-primary"
+              >
+                Edit
+              </button>
+              <button
+                @click="remove(index, 'instructions')"
+                class="btn btn-primary"
+                :disabled="instructions.length === 1"
+              >
+                Remove
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Implementation for Ingredients -->
       <div class="ingredients">
-        <h2>Ingredients</h2>
+        <label for="ingredient">Ingredients</label>
         <div
           v-for="(ingredient, index) in ingredients"
           :key="'ingredient' + index"
           class="form-group"
         >
-
+          <!-- 'Edit' state for ingredients -->
           <div
             v-if="ingredient.edit"
             class="input-group mb-3"
@@ -107,44 +112,47 @@
               class="form-control"
             />
 
-            <button
-              @click="addEdit(index, 'ingredients')"
-              class="btn btn-primary"
-              style="margin-left: 5px; float: right"
-            >
-              Add
-            </button>
-            <button
-              @click="remove(index, 'ingredients')"
-              class="btn btn-primary"
-              style="margin-left: 5px; float: right"
-              :disabled="ingredients.length === 1"
-            >
-              Remove
-            </button>
+            <div style="display: flex; justify-content: flex-end; gap: 5px;">
+              <button
+                @click="addEdit(index, 'ingredients')"
+                class="btn btn-primary"
+              >
+                Add
+              </button>
+              <button
+                @click="remove(index, 'ingredients')"
+                class="btn btn-primary"
+                :disabled="ingredients.length === 1"
+              >
+                Remove
+              </button>
+            </div>
           </div>
-          <p
+
+          <!-- 'Display' state for ingredients -->
+          <div
             v-else
-            style="background-color: #f5f5f5; padding: 10px"
+            style="background-color: #f5f5f5; padding: 10px; display: flex; justify-content: space-between; align-items: flex-start;"
           >
-            Name: {{ ingredient.name }} Quantity:
-            {{ ingredient.quantity }} Unit: {{ ingredient.unit }}
-            <button
-              @click="edit(index, 'ingredients')"
-              class="btn btn-primary"
-              style="float: right; margin-left: 5px"
-            >
-              Edit
-            </button>
-            <button
-              @click="remove(index, 'ingredients')"
-              class="btn btn-primary"
-              style="margin-left: 5px; float: right"
-              :disabled="ingredients.length === 1"
-            >
-              Remove
-            </button>
-          </p>
+            Name: <strong> {{ ingredient.name }} </strong><br />
+            Quantity: <strong> {{ ingredient.quantity }} </strong><br />
+            Unit: <strong> {{ ingredient.unit }} </strong>
+            <div style="display: flex; justify-content: flex-end; gap: 5px;">
+              <button
+                @click="edit(index, 'ingredients')"
+                class="btn btn-primary"
+              >
+                Edit
+              </button>
+              <button
+                @click="remove(index, 'ingredients')"
+                class="btn btn-primary"
+                :disabled="ingredients.length === 1"
+              >
+                Remove
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
