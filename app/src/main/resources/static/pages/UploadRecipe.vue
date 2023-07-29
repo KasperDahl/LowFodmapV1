@@ -109,11 +109,18 @@
               class="form-control"
             />
             <span class="input-group-text">Unit:</span>
-            <input
-              type="text"
+            <select
               v-model="ingredient.unit"
-              class="form-control"
-            />
+              class="form-select"
+            >
+              <option
+                v-for="unit in allUnits"
+                :key="unit"
+                :value="unit"
+              >
+                {{ unit }}
+              </option>
+            </select>
 
             <div style="display: flex; justify-content: flex-end; gap: 5px;">
               <button
@@ -138,9 +145,8 @@
             style="background-color: #f5f5f5; padding: 3px; display: flex; justify-content: space-between; align-items: flex-start"
           >
             <div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
-              <span>Name: <strong> {{ ingredient.name }} </strong></span>
-              <span>Quantity: <strong> {{ ingredient.quantity }} </strong></span>
-              <span>Unit: <strong> {{ ingredient.unit }} </strong></span>
+              <span>Name: <strong> {{ ingredient.name }}, {{ ingredient.quantity }} {{ ingredient.unit }} </strong></span>
+
             </div>
             <div style="display: flex; justify-content: flex-end; gap: 5px;">
               <button

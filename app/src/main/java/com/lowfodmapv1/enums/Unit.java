@@ -1,17 +1,17 @@
 package com.lowfodmapv1.enums;
 
 public enum Unit {
-    GRAM("g"),
-    STYK("stk"),
-    DAASE("ds"),
-    SPISESKE("spsk"),
-    TESKE("tsk"),
-    LITER("l"),
-    DECILITER("dl"),
-    BUNDT("bdt"),
-    KILOGRAM("kg"),
-    MILLILITER("ml"),
-    PAKKE("pk");
+    GRAM("gram"),
+    STYK("styk"),
+    DAASE("dåse"),
+    SPISESKE("spiseske"),
+    TESKE("teske"),
+    LITER("liter"),
+    DECILITER("deciliter"),
+    BUNDT("bundt"),
+    KILOGRAM("kilogram"),
+    MILLILITER("milliliter"),
+    PAKKE("pakke");
 
     private String value;
 
