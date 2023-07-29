@@ -180,6 +180,8 @@
           </select>
         </div>
         <!-- Meal Type div -->
+
+        <!-- Meal Type div -->
         <div class="form-group">
           <label for="mealType">Meal Type</label>
           <br />
@@ -189,10 +191,10 @@
             class="form-select"
             required
           >
-            <option value="Hovedret">Hovedret</option>
-            <option value="Forret">Forret</option>
-            <option value="Dessert">Dessert</option>
-            <option value="Salat">Salat</option>
+            <option
+              v-for="mealType in allMealTypes"
+              :key="mealType"
+            >{{ mealType }}</option>
           </select>
         </div>
         <!-- Full Meal div -->
@@ -264,7 +266,13 @@ export default {
       },
       instructions: [{ text: "", edit: true }],
       ingredients: [{ name: "", quantity: "", unit: "", edit: true }],
+      allMealTypes: [],
+      allUnits: [],
     };
+  },
+  created() {
+    this.fetchMealTypes();
+    this.fetchUnits();
   },
   methods: {
     addEdit(index, property) {
@@ -298,6 +306,20 @@ export default {
       } else if (property === "ingredients" && this.ingredients.length > 1) {
         this.ingredients.splice(index, 1);
       }
+    },
+    fetchMealTypes() {
+      fetch("/api/mealtypes")
+        .then((res) => res.json())
+        .then((data) => {
+          this.allMealTypes = data;
+        });
+    },
+    fetchUnits() {
+      fetch("/api/units")
+        .then((res) => res.json())
+        .then((data) => {
+          this.allUnits = data;
+        });
     },
     submitRecipe() {
       console.log(this.recipe);
