@@ -2,7 +2,10 @@
   <div class="recipe-upload">
     <h1>Upload Recipe</h1>
     <form @submit.prevent="submitRecipe">
-      <div class="form-group">
+      <div
+        class="form-group"
+        style="margin-bottom: 20px;"
+      >
         <label for="name">Name</label>
         <br />
         <input
@@ -132,11 +135,13 @@
           <!-- 'Display' state for ingredients -->
           <div
             v-else
-            style="background-color: #f5f5f5; padding: 10px; display: flex; justify-content: space-between; align-items: flex-start;"
+            style="background-color: #f5f5f5; padding: 3px; display: flex; justify-content: space-between; align-items: flex-start"
           >
-            Name: <strong> {{ ingredient.name }} </strong><br />
-            Quantity: <strong> {{ ingredient.quantity }} </strong><br />
-            Unit: <strong> {{ ingredient.unit }} </strong>
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
+              <span>Name: <strong> {{ ingredient.name }} </strong></span>
+              <span>Quantity: <strong> {{ ingredient.quantity }} </strong></span>
+              <span>Unit: <strong> {{ ingredient.unit }} </strong></span>
+            </div>
             <div style="display: flex; justify-content: flex-end; gap: 5px;">
               <button
                 @click="edit(index, 'ingredients')"
@@ -206,7 +211,7 @@
         </div>
         <!-- Time To Cook div -->
         <div class="form-group">
-          <label for="timeToCook">Time To Cook (in minutes)</label>
+          <label for="timeToCook">Cooking Time (in minutes)</label>
           <br />
           <input
             type="number"
