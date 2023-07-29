@@ -176,7 +176,6 @@
             id="servings"
             v-model="recipe.servings"
             class="form-select"
-            required
           >
             <option
               v-for="number in 8"
@@ -195,7 +194,6 @@
             id="mealType"
             v-model="recipe.mealType"
             class="form-select"
-            required
           >
             <option
               v-for="mealType in allMealTypes"
@@ -211,7 +209,6 @@
             id="fullMeal"
             v-model="recipe.fullMeal"
             class="form-select"
-            required
           >
             <option value="true">True</option>
             <option value="false">False</option>
@@ -226,7 +223,6 @@
             id="timeToCook"
             v-model="recipe.timeToCook"
             class="form-control"
-            required
           />
         </div>
       </div>
@@ -239,7 +235,6 @@
           v-model="recipe.comments"
           class="form-control"
           style="height: 100px;"
-          required
         ></textarea>
       </div>
 
@@ -328,7 +323,25 @@ export default {
         });
     },
     submitRecipe() {
+      this.recipe.instructions = this.instructions
+        .filter((item) => !item.edit)
+        .map((item) => item.text);
+      this.recipe.ingredients = this.ingredients.filter((item) => !item.edit);
       console.log(this.recipe);
+      fetch("/api/recipes", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(this.recipe),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     },
   },
 };

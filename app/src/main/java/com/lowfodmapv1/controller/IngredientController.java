@@ -1,7 +1,6 @@
 package com.lowfodmapv1.controller;
 
 import com.lowfodmapv1.repository.IngredientRepository;
-import com.lowfodmapv1.model.Ingredient;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

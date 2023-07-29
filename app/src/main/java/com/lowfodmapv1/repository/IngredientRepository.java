@@ -1,8 +1,5 @@
 package com.lowfodmapv1.repository;
 
-import com.lowfodmapv1.model.Ingredient;
-import com.lowfodmapv1.repository.RecipeRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
