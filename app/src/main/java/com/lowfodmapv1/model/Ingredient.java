@@ -1,10 +1,13 @@
 package com.lowfodmapv1.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /* 
 This class represents an ingredient with properties like name, quantity, and unit.
- */ 
+ */
 
- public class Ingredient {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Ingredient {
     private String name;
     private double quantity;
     private String unit;
@@ -12,7 +15,8 @@ This class represents an ingredient with properties like name, quantity, and uni
     public Ingredient() {
     }
 
-    // perhaps I need multiple constructors if some of the fields are missing from the json recipes file
+    // perhaps I need multiple constructors if some of the fields are missing from
+    // the json recipes file
     public Ingredient(String name, double quantity, String unit) {
         this.name = name;
         this.quantity = quantity;
@@ -44,18 +48,20 @@ This class represents an ingredient with properties like name, quantity, and uni
     }
 
     /**
-     * Returns a formatted string representing the quantity and unit of the ingredient.
-     * The quantity is formatted as a decimal with one digit after the decimal point,
+     * Returns a formatted string representing the quantity and unit of the
+     * ingredient.
+     * The quantity is formatted as a decimal with one digit after the decimal
+     * point,
      * and the unit is appended to the end of the string.
-     * For example, if the quantity is 0.3 and the unit is "kg", the resulting string
+     * For example, if the quantity is 0.3 and the unit is "kg", the resulting
+     * string
      * would be "0.3kg".
-     * @return The formatted string representing the quantity and unit of the ingredient.
+     * 
+     * @return The formatted string representing the quantity and unit of the
+     *         ingredient.
      */
     public String getQuantityString() {
         return String.format("%.1f %s", quantity, unit);
     }
-    
 
 }
-
-

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -22,10 +22,9 @@ making it easier to switch between different storage methods (e.g., file, databa
  */
 @Repository
 public class RecipeRepository {
-
-    private static final String RECIPES_JSON_FILE = "recipes.json";
-    // private static final String RECIPES_JSON_FILE =
-    // "C:/LowFodmapV1/app/src/main/resources/recipes.json";
+    // This is a relative path from the project root. You can also use an absolute
+    // path if you prefer.
+    private static final String RECIPES_JSON_FILE = "src/main/resources/recipes.json";
 
     private ObjectMapper objectMapper;
 
@@ -34,19 +33,27 @@ public class RecipeRepository {
     }
 
     /**
-     * Load recipes from the JSON file.
+     * Loads recipes from the JSON file.
      *
      * @return List of Recipe objects.
-     * @throws IOException If there is an issue reading the file.
+     * @throws IOException If an error occurs reading the file.
      */
     public List<Recipe> loadRecipes() throws IOException {
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(RECIPES_JSON_FILE);
+        // Get a File object for the recipes file
+        File file = Paths.get(RECIPES_JSON_FILE).toFile();
 
-        if (inputStream == null) {
+        // If file doesn't exist, return empty list
+        if (!file.exists()) {
             return new ArrayList<>();
         }
+
+        // Construct a CollectionType object representing a list of Recipe objects.
+        // This is required for Jackson to know what type to deserialize the JSON into.
         CollectionType listType = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Recipe.class);
-        return objectMapper.readValue(inputStream, listType);
+
+        // Use Jackson to parse the JSON file into a list of Recipe objects.
+        // The readValue() method is called on the ObjectMapper object.
+        return objectMapper.readValue(file, listType);
     }
 
     /**
@@ -66,19 +73,19 @@ public class RecipeRepository {
      * @throws IOException If there is an issue reading the file.
      */
     public List<String> loadUniqueIngredients() throws IOException {
-        // Attempt to load the JSON file from the classpath
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(RECIPES_JSON_FILE);
+        // Get a File object for the recipes file
+        File file = Paths.get(RECIPES_JSON_FILE).toFile();
 
-        // If the file doesn't exist, return an empty list
-        if (inputStream == null) {
+        // If file doesn't exist, return empty list
+        if (!file.exists()) {
             return new ArrayList<>();
         }
 
-        // Construct a CollectionType object representing a list of Recipe objects
+        // CollectionType for deserialization
         CollectionType listType = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Recipe.class);
 
-        // Use Jackson to parse the JSON file into a list of Recipe objects
-        List<Recipe> recipes = objectMapper.readValue(inputStream, listType);
+        // Parse JSON file into Recipe objects
+        List<Recipe> recipes = objectMapper.readValue(file, listType);
 
         // Initialize a set to store the unique ingredient names
         Set<String> uniqueIngredientNames = new HashSet<>();
@@ -87,21 +94,16 @@ public class RecipeRepository {
         for (Recipe recipe : recipes) {
             // Iterate through each ingredient in the current recipe
             for (Ingredient ingredient : recipe.getIngredients()) {
-                // Add the name of the ingredient to the set.
-                // Since a set automatically eliminates duplicates, only unique names will be
-                // stored.
+                // Add the ingredient name to the set
                 uniqueIngredientNames.add(ingredient.getName());
             }
         }
 
-        // Convert the set of unique ingredient names to a list
+        // Convert the set to a list and sort it
         List<String> uniqueIngredientNamesList = new ArrayList<>(uniqueIngredientNames);
-
-        // Sort the list of unique ingredient names
         Collections.sort(uniqueIngredientNamesList);
 
         // Return the sorted list
         return uniqueIngredientNamesList;
     }
-
 }

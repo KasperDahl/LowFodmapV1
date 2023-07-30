@@ -5,10 +5,16 @@
     <div class="card mb-3">
       <div class="card-body">
         <h5 class="card-title">Instructions</h5>
+        <!-- Use v-for to loop over each instruction and display them -->
+        <!-- Apply some css to handle long instructions and spacing between them -->
         <p
           class="card-text"
-          v-html="formatInstructions(recipe.instructions)"
-        ></p>
+          v-for="(instruction, index) in recipe.instructions"
+          :key="index"
+          style="white-space: pre-line; margin-bottom: 1rem;"
+        >
+          {{ instruction }}
+        </p>
       </div>
     </div>
 
@@ -68,9 +74,6 @@ export default {
         .then((data) => {
           this.recipe = data.find((recipe) => recipe.name === recipeName);
         });
-    },
-    formatInstructions(instructions) {
-      return instructions.replace(/\n/g, "<br>");
     },
   },
 };

@@ -31,7 +31,7 @@ import java.util.List;
 @RequestMapping("/api/recipes")
 public class RecipeController {
 
-    private static final File FILE = new File("saved_recipes.json");
+    private static final File FILE = new File("src/main/resources/recipes.json");
 
     // Automatically injects the RecipeRepository instance into the controller
     @Autowired

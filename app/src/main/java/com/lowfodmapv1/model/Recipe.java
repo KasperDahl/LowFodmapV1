@@ -1,4 +1,5 @@
 package com.lowfodmapv1.model;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -7,9 +8,9 @@ This class represents a single recipe with properties like name, instructions,
 ingredients, servings, mealType, fullmMal, calories, timeToCook, and comments.
  */
 
- public class Recipe {
+public class Recipe {
     private String name;
-    private String instructions;
+    private List<String> instructions;
     private List<Ingredient> ingredients;
     private int servings;
     private String mealType;
@@ -21,8 +22,8 @@ ingredients, servings, mealType, fullmMal, calories, timeToCook, and comments.
     public Recipe() {
     }
 
-    public Recipe(String name, String instructions, List<Ingredient> ingredients, int servings, String mealType,
-                  boolean fullMeal, int calories, int timeToCook, String comments) {
+    public Recipe(String name, List<String> instructions, List<Ingredient> ingredients, int servings, String mealType,
+            boolean fullMeal, int calories, int timeToCook, String comments) {
         this.name = name;
         this.instructions = instructions;
         this.ingredients = ingredients;
@@ -42,11 +43,11 @@ ingredients, servings, mealType, fullmMal, calories, timeToCook, and comments.
         this.name = name;
     }
 
-    public String getInstructions() {
-        return instructions;
+    public List<String> getInstructions() {
+        return instructions != null ? instructions : Collections.emptyList();
     }
 
-    public void setInstructions(String instructions) {
+    public void setInstructions(List<String> instructions) {
         this.instructions = instructions;
     }
 

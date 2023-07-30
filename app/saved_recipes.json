@@ -1,0 +1,76 @@
+[
+  {
+    "name": "kap",
+    "instructions": [
+      "hallo",
+      "there"
+    ],
+    "ingredients": [],
+    "servings": 0,
+    "mealType": "",
+    "fullMeal": false,
+    "calories": 0,
+    "timeToCook": 0,
+    "comments": ""
+  },
+  {
+    "name": "new",
+    "instructions": [
+      "sup"
+    ],
+    "ingredients": [
+      {
+        "name": "gulerødder",
+        "quantity": 2.0,
+        "unit": "styk",
+        "quantityString": "2.0 styk"
+      },
+      {
+        "name": "mælk",
+        "quantity": 2.0,
+        "unit": "liter",
+        "quantityString": "2.0 liter"
+      }
+    ],
+    "servings": 2,
+    "mealType": "Hovedret",
+    "fullMeal": true,
+    "calories": 0,
+    "timeToCook": 20,
+    "comments": "Kap"
+  },
+  {
+    "name": "Kaspersuppe",
+    "instructions": [
+      "1. Yooyoyoy",
+      "2. One more",
+      "3. TO GO!"
+    ],
+    "ingredients": [
+      {
+        "name": "svampe",
+        "quantity": 200.0,
+        "unit": "gram",
+        "quantityString": "200.0 gram"
+      },
+      {
+        "name": "mælk",
+        "quantity": 2.0,
+        "unit": "liter",
+        "quantityString": "2.0 liter"
+      },
+      {
+        "name": "mel",
+        "quantity": 2.0,
+        "unit": "kilogram",
+        "quantityString": "2.0 kilogram"
+      }
+    ],
+    "servings": 2,
+    "mealType": "Hovedret",
+    "fullMeal": true,
+    "calories": 0,
+    "timeToCook": 23,
+    "comments": "Yo yoyyo"
+  }
+]

@@ -323,11 +323,39 @@ export default {
         });
     },
     submitRecipe() {
+      // Convert the first character of the recipe name to uppercase
+      // and append the rest of the name starting from the second character
+      this.recipe.name =
+        this.recipe.name.charAt(0).toUpperCase() + this.recipe.name.slice(1);
       this.recipe.instructions = this.instructions
+        // The 'filter' function is used to remove any instructions that are still in edit mode
+        // This is determined by checking if the 'edit' property of the instruction object is false
+        // The result is an array of instruction objects that are no longer in edit mode
         .filter((item) => !item.edit)
-        .map((item) => item.text);
-      this.recipe.ingredients = this.ingredients.filter((item) => !item.edit);
+        // The 'map' function is used to transform each instruction object in the array
+        // We transform the 'text' property of the instruction object to include the instruction number
+        // The trim function is used to remove leading and trailing whitespace from the instruction text
+        // Then we convert the first character to uppercase
+        // and append the rest of the instruction text starting from the second character
+        .map(
+          (item, index) =>
+            `${index + 1}. ${
+              item.text.trim().charAt(0).toUpperCase() +
+              item.text.trim().slice(1)
+            }`
+        );
+      // Similar to the 'instructions', the 'filter' function is used to remove any ingredients that are still in edit mode
+      this.recipe.ingredients = this.ingredients
+        .filter((item) => !item.edit)
+        .map((item) => ({
+          ...item,
+          // Convert the ingredient name to lowercase
+          name: item.name.toLowerCase(),
+        }));
+
       console.log(this.recipe);
+
+      // Sending the recipe data to the server using a POST request
       fetch("/api/recipes", {
         method: "POST",
         headers: {
@@ -338,6 +366,21 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           console.log("Success:", data);
+          // Reset the recipe object
+          this.recipe = {
+            name: "",
+            instructions: [],
+            ingredients: [],
+            servings: 0,
+            mealType: "",
+            fullMeal: false,
+            timeToCook: "",
+            comments: "",
+          };
+          // Reset the instructions array
+          this.instructions = [{ text: "", edit: true }];
+          // Reset the ingredients array
+          this.ingredients = [{ name: "", quantity: "", unit: "", edit: true }];
         })
         .catch((error) => {
           console.error("Error:", error);
