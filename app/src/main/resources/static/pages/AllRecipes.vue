@@ -48,7 +48,7 @@
         v-for="recipe in recipes"
         :key="recipe.name"
       >
-        <router-link :to="'/recipe/' + recipe.name">{{
+        <router-link :to="'/api/recipes/' + recipe.name">{{
           recipe.name
         }}</router-link>
         <button
@@ -66,7 +66,7 @@
         v-for="recipe in selectedRecipes"
         :key="recipe.name"
       >
-        <router-link :to="'/recipe/' + recipe.name">{{
+        <router-link :to="'/api/recipes/' + recipe.name">{{
           recipe.name
         }}</router-link>
         <button

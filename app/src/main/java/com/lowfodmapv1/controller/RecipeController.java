@@ -14,7 +14,9 @@ import com.lowfodmapv1.model.Recipe;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -92,4 +94,21 @@ public class RecipeController {
 
         return recipe;
     }
+
+    @DeleteMapping("/{name}")
+    public ResponseEntity<Void> deleteRecipe(@PathVariable String name) {
+        try {
+            // Delete the recipe
+            recipeRepository.deleteRecipe(name);
+
+            // Return a "No Content" status to indicate successful deletion
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (IOException e) {
+            // If there's an issue reading or writing the file, or the recipe is not found,
+            // print the stack trace and return an "Internal Server Error" status
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 }

@@ -326,7 +326,8 @@ export default {
       // Convert the first character of the recipe name to uppercase
       // and append the rest of the name starting from the second character
       this.recipe.name =
-        this.recipe.name.charAt(0).toUpperCase() + this.recipe.name.slice(1);
+        this.recipe.name.trim().charAt(0).toUpperCase() +
+        this.recipe.name.trim().slice(1);
       this.recipe.instructions = this.instructions
         // The 'filter' function is used to remove any instructions that are still in edit mode
         // This is determined by checking if the 'edit' property of the instruction object is false

@@ -106,4 +106,35 @@ public class RecipeRepository {
         // Return the sorted list
         return uniqueIngredientNamesList;
     }
+
+    /**
+     * Removes a recipe from the JSON file.
+     *
+     * @param name Name of the recipe to be removed.
+     * @throws IOException If there is an issue reading or writing the file.
+     */
+    public void deleteRecipe(String name) throws IOException {
+        File file = Paths.get(RECIPES_JSON_FILE).toFile();
+        CollectionType listType = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Recipe.class);
+
+        List<Recipe> recipes = objectMapper.readValue(file, listType);
+
+        // Find the recipe to delete
+        Recipe recipeToDelete = recipes.stream()
+                .filter(recipe -> recipe.getName().equals(name))
+                .findFirst()
+                .orElse(null);
+
+        // If the recipe is not found, throw an exception
+        if (recipeToDelete == null) {
+            throw new IOException("Recipe not found");
+        }
+
+        // Remove the recipe from the list
+        recipes.remove(recipeToDelete);
+
+        // Write the updated list back to the file
+        objectMapper.writeValue(file, recipes);
+    }
+
 }

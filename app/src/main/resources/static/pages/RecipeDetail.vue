@@ -1,6 +1,13 @@
 <template>
+
   <div v-if="recipe">
-    <h2>{{ recipe.name }}</h2>
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>{{ recipe.name }}</h2>
+      <button
+        class="btn btn-danger"
+        @click="confirmDelete"
+      >Delete Recipe</button>
+    </div>
 
     <div class="card mb-3">
       <div class="card-body">
@@ -73,6 +80,28 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           this.recipe = data.find((recipe) => recipe.name === recipeName);
+        });
+    },
+    confirmDelete() {
+      if (
+        window.confirm(
+          "Are you sure you want to delete this recipe? This action cannot be undone."
+        )
+      ) {
+        this.deleteRecipe();
+      }
+    },
+    deleteRecipe() {
+      const recipeName = this.$route.params.name;
+      fetch(`/api/recipes/${recipeName}`, { method: "DELETE" })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Failed to delete recipe.");
+          }
+          this.$router.push("/allrecipes"); // Redirect to main recipes page
+        })
+        .catch((error) => {
+          console.error(error);
         });
     },
   },

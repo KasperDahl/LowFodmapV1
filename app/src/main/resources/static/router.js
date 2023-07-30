@@ -13,7 +13,7 @@ function loadRoutes(loadSFC) {
       component: () => loadSFC("./pages/UploadRecipe.vue"),
     },
     {
-      path: "/recipe/:name",
+      path: "/api/recipes/:name",
       component: () => loadSFC("./pages/RecipeDetail.vue"),
     },
     // Add more routes here
