@@ -1,0 +1,29 @@
+[
+  {
+    "name": "kasper",
+    "instructions": [
+      "1. Do this",
+      "2. Do taht"
+    ],
+    "ingredients": [
+      {
+        "name": "mælk",
+        "quantity": 2.0,
+        "unit": "liter",
+        "quantityString": "2.0 liter"
+      },
+      {
+        "name": "cola",
+        "quantity": 2.0,
+        "unit": "teske",
+        "quantityString": "2.0 teske"
+      }
+    ],
+    "servings": 2,
+    "mealType": "Forret",
+    "fullMeal": true,
+    "calories": 0,
+    "timeToCook": 21,
+    "comments": "hey"
+  }
+]
