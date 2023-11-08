@@ -51,6 +51,12 @@
               to="/shoppinglist"
             >Shopping List</router-link>
           </li>
+          <li class="nav-item">
+            <router-link
+              class="nav-link"
+              to="/specialitems"
+            >Special Items</router-link>
+          </li>
         </ul>
       </div>
     </div>

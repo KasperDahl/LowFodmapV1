@@ -15,7 +15,7 @@ import com.lowfodmapv1.model.SpecialItem;
 import com.lowfodmapv1.service.SpecialItemService;
 
 @RestController
-@RequestMapping("/api/specialItems")
+@RequestMapping("/api/specialitems")
 // This class is used to store special items in the database.
 // It is annotated with @RestController and @RequestMapping to indicate that it
 // is a controller class.
