@@ -4,6 +4,8 @@ import com.lowfodmapv1.model.Ingredient;
 import com.lowfodmapv1.model.Recipe;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
+
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Repository;
 
 import java.io.File;
@@ -22,9 +24,8 @@ making it easier to switch between different storage methods (e.g., file, databa
  */
 @Repository
 public class RecipeRepository {
-    // This is a relative path from the project root. You can also use an absolute
-    // path if you prefer.
-    private static final String RECIPES_JSON_FILE = "src/main/resources/recipes.json";
+    // This is the path relative to the resource folder (app\src\main\resources).
+    private static final String RECIPES_JSON_FILE = "recipes.json";
 
     private ObjectMapper objectMapper;
 
@@ -40,7 +41,7 @@ public class RecipeRepository {
      */
     public List<Recipe> loadRecipes() throws IOException {
         // Get a File object for the recipes file
-        File file = Paths.get(RECIPES_JSON_FILE).toFile();
+        File file = new ClassPathResource(RECIPES_JSON_FILE).getFile();
 
         // If file doesn't exist, return empty list
         if (!file.exists()) {
@@ -74,7 +75,7 @@ public class RecipeRepository {
      */
     public List<String> loadUniqueIngredients() throws IOException {
         // Get a File object for the recipes file
-        File file = Paths.get(RECIPES_JSON_FILE).toFile();
+        File file = new ClassPathResource(RECIPES_JSON_FILE).getFile();
 
         // If file doesn't exist, return empty list
         if (!file.exists()) {
