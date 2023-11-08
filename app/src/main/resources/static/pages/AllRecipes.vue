@@ -6,18 +6,9 @@
         Sort by choosing an ingredient from the dropdown or write the
         ingredient's name yourself:
       </p>
-      <select
-        v-model="newIngredient"
-        @change="addIngredient"
-      >
-        <option
-          disabled
-          value=""
-        >Please select an ingredient</option>
-        <option
-          v-for="ingredient in allIngredients"
-          :key="ingredient"
-        >
+      <select v-model="newIngredient" @change="addIngredient">
+        <option disabled value="">Please select an ingredient</option>
+        <option v-for="ingredient in allIngredients" :key="ingredient">
           {{ ingredient }}
         </option>
       </select>
@@ -26,14 +17,8 @@
         type="text"
         placeholder="Enter an ingredient"
       />
-      <button
-        @click="addIngredient"
-        class="btn btn-primary"
-      >Add</button>
-      <div
-        v-for="ingredient in selectedIngredients"
-        :key="ingredient"
-      >
+      <button @click="addIngredient" class="btn btn-primary">Add</button>
+      <div v-for="ingredient in selectedIngredients" :key="ingredient">
         <span>
           {{ ingredient }}
           <button @click="removeIngredient(ingredient)">x</button>
@@ -44,10 +29,7 @@
       </p>
     </div>
     <ul>
-      <li
-        v-for="recipe in recipes"
-        :key="recipe.name"
-      >
+      <li v-for="recipe in recipes" :key="recipe.name">
         <router-link :to="'/api/recipes/' + recipe.name">{{
           recipe.name
         }}</router-link>
@@ -62,10 +44,7 @@
     </ul>
     <h2>Chosen Recipes:</h2>
     <ul>
-      <li
-        v-for="recipe in selectedRecipes"
-        :key="recipe.name"
-      >
+      <li v-for="recipe in selectedRecipes" :key="recipe.name">
         <router-link :to="'/api/recipes/' + recipe.name">{{
           recipe.name
         }}</router-link>
@@ -78,10 +57,7 @@
         </button>
       </li>
     </ul>
-    <button
-      @click="saveSelectedRecipes"
-      class="btn btn-primary"
-    >Save</button>
+    <button @click="saveSelectedRecipes" class="btn btn-primary">Save</button>
   </div>
 </template>
 
