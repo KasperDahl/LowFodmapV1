@@ -7,5 +7,4 @@ node_modules
 
 
 # Ignore specific files
-application.properties
-```
+env.properties
