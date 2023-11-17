@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lowfodmapv1.model.SpecialItem;
-import com.lowfodmapv1.service.SpecialItemService;
+import com.lowfodmapv1.service.impl.SpecialItemServiceImpl;
 
 @RestController
 @RequestMapping("/api/specialitems")
@@ -20,10 +20,10 @@ import com.lowfodmapv1.service.SpecialItemService;
 // It is annotated with @RestController and @RequestMapping to indicate that it
 // is a controller class.
 public class SpecialItemController {
-    private final SpecialItemService specialItemService;
+    private final SpecialItemServiceImpl specialItemService;
 
     @Autowired
-    public SpecialItemController(SpecialItemService specialItemService) {
+    public SpecialItemController(SpecialItemServiceImpl specialItemService) {
         this.specialItemService = specialItemService;
     }
 

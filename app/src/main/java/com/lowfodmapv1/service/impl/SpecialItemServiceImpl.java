@@ -1,4 +1,4 @@
-package com.lowfodmapv1.service;
+package com.lowfodmapv1.service.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,15 +8,16 @@ import org.springframework.stereotype.Service;
 
 import com.lowfodmapv1.model.SpecialItem;
 import com.lowfodmapv1.repository.SpecialItemRepository;
+import com.lowfodmapv1.service.interfaces.SpecialItemService;
 
 @Service
 // This class is used to store special items in the database.
 // It is annotated with @Service to indicate that it is a service class.
-public class SpecialItemService {
+public class SpecialItemServiceImpl implements SpecialItemService {
     private final SpecialItemRepository specialItemRepository;
 
     @Autowired
-    public SpecialItemService(SpecialItemRepository specialItemRepository) {
+    public SpecialItemServiceImpl(SpecialItemRepository specialItemRepository) {
         this.specialItemRepository = specialItemRepository;
     }
 
@@ -47,7 +48,6 @@ public class SpecialItemService {
                     specialItemData.setPrice(specialItem.getPrice());
                     return specialItemRepository.save(specialItemData);
                 });
-
     }
 
     // This method deletes a special item.

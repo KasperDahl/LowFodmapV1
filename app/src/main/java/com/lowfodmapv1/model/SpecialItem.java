@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 // This class represents a single special item with properties like name, brand, category, shop, price, and description.
-@Document(collection = "specialItems")
+@Document(collection = "SpecialItem")
 public class SpecialItem {
     @Id
     private String id;
