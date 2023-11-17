@@ -4,3 +4,9 @@
 # Ignore Gradle build output directory
 build
 node_modules
+
+
+# Ignore specific files
+mongoDB.txt
+application.properties
+```
