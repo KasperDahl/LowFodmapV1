@@ -7,6 +7,5 @@ node_modules
 
 
 # Ignore specific files
-mongoDB.txt
 application.properties
 ```

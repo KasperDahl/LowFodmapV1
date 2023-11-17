@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>Special Items Test</h1>     
+      <h1>Special Items</h1>     
     </div>
     <div>
         <button>Get all Special Items</button>
