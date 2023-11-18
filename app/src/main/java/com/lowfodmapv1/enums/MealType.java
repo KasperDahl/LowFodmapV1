@@ -7,6 +7,7 @@ public enum MealType {
     SALAT("Salat"),
     SNACK("Snack"),
     DRESSING("Dressing"),
+    BAGNING("Bagning"),
     MORGENMAD("Morgenmad");
 
     private String value;

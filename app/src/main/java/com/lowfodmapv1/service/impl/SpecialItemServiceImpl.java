@@ -44,7 +44,7 @@ public class SpecialItemServiceImpl implements SpecialItemService {
                     specialItemData.setBrand(specialItem.getBrand());
                     specialItemData.setCategory(specialItem.getCategory());
                     specialItemData.setShop(specialItem.getShop());
-                    specialItemData.setDescription(specialItem.getDescription());
+                    specialItemData.setNote(specialItem.getNote());
                     specialItemData.setPrice(specialItem.getPrice());
                     return specialItemRepository.save(specialItemData);
                 });

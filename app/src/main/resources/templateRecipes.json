@@ -1,5 +1,29 @@
 {
   "name": "",
+  "instructions": [
+    ""
+  ],
+  "ingredients": [
+    {
+      "name": "",
+      "quantity": ,
+      "unit": "",
+      "quantityString": ""
+    }
+  ],
+  "servings": ,
+  "mealType": ,
+  "fullMeal": ,
+  "calories": ,
+  "timeToCook": ,
+  "comments": "",
+  "source": "",
+  "tried": 
+}
+
+
+{
+  "name": "",
   "instructions": "",
   "ingredients": [
     {
@@ -13,5 +37,6 @@
   "fullMeal": false,
   "calories": 0,
   "timeToCook": "",
-  "comments": ""
+  "comments": "",
+  "source": ""
 }
