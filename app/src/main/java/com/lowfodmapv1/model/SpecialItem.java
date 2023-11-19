@@ -15,9 +15,7 @@ public class SpecialItem {
     private String brand;
     private String size;
     private String category;
-    // private String shop;
     private ArrayList<String> shop;
-    // private BigDecimal price;
     private ArrayList<BigDecimal> price;
     private String note;
 

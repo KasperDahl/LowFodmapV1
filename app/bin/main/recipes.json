@@ -1204,5 +1204,390 @@
         "comments": "Parmesan kan udskiftes med pecorinoost eller lignende.",
         "source": "Monash App",
         "tried": true
+    },
+    {
+        "name": "Majspandekager med oksekødsfyld",
+        "instructions": [
+            "1. Majsmel, laktosefri mælk, æg, olie og salt piskes godt sammen.",
+            "2. Dejen sættes i køleskab og 'trækker' ca. ½ time.",
+            "3. Bag pandekager på en slip-let pande. Læg dem til side mens du laver fyldet.",
+            "4. Skær det grønne fra forårsløg i tynde ringe og gulerødderne i fine tern.",
+            "5. Varm olien op i en gryde og svits kødet heri til det skifter farve.",
+            "6. Tilsæt forårsløg, gulerødder, flåede tomater, koncentreret tomatpure og fond/vand.",
+            "7. Krydr med oregano, timian/basilikum, paprika, salt og peber.",
+            "8. Lad kødsovsen småkoge uden låg ca. 20 min.",
+            "9. Rør jævnligt i gryden. Smag eventuelt yderligere til med krydderier, salt og peber.",
+            "10. Majspandekagerne rulles om fyldet og lægges i et ildfast fad. (2-3 spsk. fyld til 1 majspandekage).",
+            "11. Før majspandekagerne sættes i ovnen drysses eventuelt med revet ost.",
+            "12. Majspandekagerne sættes i en forvarmet ovn på 200 grader og varmes til osten smelter, ca. 15-20 min."
+        ],
+        "ingredients": [
+            {
+                "name": "majsmel",
+                "quantity": 100,
+                "unit": "g",
+                "quantityString": "100 g"
+            },
+            {
+                "name": "laktosefri mælk",
+                "quantity": 4,
+                "unit": "dl",
+                "quantityString": "4 dl"
+            },
+            {
+                "name": "æg",
+                "quantity": 4,
+                "unit": "stk",
+                "quantityString": "4 stk"
+            },
+            {
+                "name": "olie",
+                "quantity": 1.5,
+                "unit": "spsk",
+                "quantityString": "1.5 spsk"
+            },
+            {
+                "name": "salt",
+                "quantity": 0.5,
+                "unit": "tsk",
+                "quantityString": "0.5 tsk"
+            },
+            {
+                "name": "forårsløg",
+                "quantity": 2,
+                "unit": "stk",
+                "quantityString": "2 forårsløg"
+            },
+            {
+                "name": "gulerødder",
+                "quantity": 2,
+                "unit": "stk",
+                "quantityString": "2 stk"
+            },
+            {
+                "name": "hakket oksekød",
+                "quantity": 300,
+                "unit": "g",
+                "quantityString": "300 g"
+            },
+            {
+                "name": "flåede tomater",
+                "quantity": 0.5,
+                "unit": "dåse",
+                "quantityString": "0.5 dåse"
+            },
+            {
+                "name": "koncentreret tomatpure",
+                "quantity": 20,
+                "unit": "g",
+                "quantityString": "20 g"
+            },
+            {
+                "name": "kyllingefond",
+                "quantity": 1,
+                "unit": "dl",
+                "quantityString": "1 dl"
+            },
+            {
+                "name": "oregano",
+                "quantity": 0.5,
+                "unit": "spsk",
+                "quantityString": "0.5 spsk."
+            },
+            {
+                "name": "timian",
+                "quantity": 0.5,
+                "unit": "tsk",
+                "quantityString": "0.5 tsk."
+            },
+            {
+                "name": "groft salt",
+                "quantity": 0.75,
+                "unit": "tsk",
+                "quantityString": "0.75 tsk."
+            },
+            {
+                "name": "peber"
+            },
+            {
+                "name": "paprika",
+                "quantity": 1,
+                "unit": "tsk",
+                "quantityString": "1 tsk"
+            },
+            {
+                "name": "revet ost"
+            }
+        ],
+        "servings": 4,
+        "mealType": "Hovedret",
+        "fullMeal": true,
+        "calories": null,
+        "timeToCook": 90,
+        "comments": "Der kan anvendes oliven- eller rapsolie, en spsk til dejen. 3 små gulerødder eller 1 stor. Paprika kan udelades. Pandekagerne kan anvendes som wraps smurt med et tyndt lag frisksost, en håndfuld salat og med skiver af røget laks. Kødsovsen kan bruges til flere formål, så lav evt. en større portion og brug til pasta den ene dag og majspandekager den næste. Friske krydderurter kan også tilsættes efter smag.",
+        "source": "LOWFODMAPDIET 1, side 181-183",
+        "tried": false
+    },
+    {
+        "name": "Kyllingesalat med kartofler og grønne bønner",
+        "instructions": [
+            "1. Skræl og kog kartofler, til de er møre (ca. 20 minutter afhængig af størrelse).",
+            "2. Dræn og afkøl kartofler, og skær i mundrette stykker.",
+            "3. Steg hele kyllingebryster i ca. 1 spsk. rapsolie, til de er gennemstegte.",
+            "4. Lad kyllingebryst afkøle lidt, og skær i skiver.",
+            "5. Giv de grønne bønner et kort opkog, så de fortsat er sprøde. Lad dem afkøle.",
+            "6. Skyl og hak persille og top fra forårsløg.",
+            "7. Varm en pande op, og rist pinjekerner herpå.",
+            "8. Opvarm resten af rapsolien (ca. 2 spsk.), og steg skiver af polenta, til den er sprød og gylden.",
+            "9. Bland salaten sammen; kartofler, kyllingebryst, grønne bønner, krydderurter og sprød polenta. Smag til, og tilføj evt. lidt flere krydderurter, salt og peber efter smag."
+        ],
+        "ingredients": [
+            {
+                "name": "kartofler",
+                "quantity": 800,
+                "unit": "g",
+                "quantityString": "800 g"
+            },
+            {
+                "name": "kyllingebryst",
+                "quantity": 600,
+                "unit": "g",
+                "quantityString": "600 g"
+            },
+            {
+                "name": "grønne bønner",
+                "quantity": 200,
+                "unit": "g",
+                "quantityString": "200 g"
+            },
+            {
+                "name": "persille",
+                "quantity": 50,
+                "unit": "g",
+                "quantityString": "50 g"
+            },
+            {
+                "name": "forårsløg",
+                "quantity": 1,
+                "unit": "bundt",
+                "quantityString": "1 bundt"
+            },
+            {
+                "name": "pinjekerner",
+                "quantity": 50,
+                "unit": "g",
+                "quantityString": "50 g"
+            },
+            {
+                "name": "polenta",
+                "quantity": 100,
+                "unit": "g",
+                "quantityString": "100 g"
+            },
+            {
+                "name": "rapsolie",
+                "quantity": 3,
+                "unit": "spsk",
+                "quantityString": "3 spsk"
+            },
+            {
+                "name": "krydderurter"
+            },
+            {
+                "name": "salt og peber"
+            }
+        ],
+        "servings": 4,
+        "mealType": "Salat",
+        "fullMeal": true,
+        "calories": 587.2,
+        "timeToCook": 60,
+        "comments": "Der er ikke medregnet brød til salaten, da polenta fungerer som en slags croutoner i salaten. Hvis polenta udelades, kan der i stedet serveres groft brød til salaten. Kan med fordel serveres med en olie-/eddikedressing.",
+        "source": "LOWFODMAPDIET 2, side 121-123",
+        "tried": false
+    },
+    {
+        "name": "Jordbær-rabarbermarmelade",
+        "instructions": [
+            "1. Bland jordbær og rabarber i en gryde.",
+            "2. Varm langsomt op.",
+            "3. Blend jordbær og rabarber med en stavblender, før det koger.",
+            "4. Tilsæt syltesukker.",
+            "5. Kog under omrøring.",
+            "6. Kog marmeladen i 4 minutter.",
+            "7. Hæld på varme, rengjorte glas.",
+            "8. Luk glassene tæt. Opbevares køligt. Åbnede glas skal opbevares på køl."
+        ],
+        "ingredients": [
+            {
+                "name": "jordbær",
+                "quantity": 500,
+                "unit": "g",
+                "quantityString": "500 g"
+            },
+            {
+                "name": "rabarber",
+                "quantity": 300,
+                "unit": "g",
+                "quantityString": "300 g"
+            },
+            {
+                "name": "syltesukker",
+                "quantity": 500,
+                "unit": "g",
+                "quantityString": "500 g"
+            }
+        ],
+        "mealType": "Tilbehør",
+        "fullMeal": false,
+        "calories": 0,
+        "timeToCook": 30,
+        "comments": "Jordbær og rabarber kan være enten friske eller optøede. Syltesukker kan evt fåes fra Dansukker. Kan fremstilles af andre FODMAP-venlige frugter, fx hindbær eller blåbær.",
+        "source": "LOWFODMAPDIET 2, side 195",
+        "tried": false
+    },
+    {
+        "name": "Massaman karry med kylling og grøntsager",
+        "instructions": [
+            "1. Find alle ingredienser frem, skær kød og grøntsager ud så tingene hurtig kan blandes sammen. Kyllingebryst, peberfrugt, kartofler og gulerødder i tern. Chili og forårsløg (fint)hakket. Ingefær hakket eller revet. Bønner halveret.",
+            "2. Sæt en stor støbejerns- eller anden stegegryde over på kraftig varme, smelt smørret og rist krydderierne af i kort tid.",
+            "3. Tilsæt kyllingebryst, chili og ingefær i gryden og rist ved kraftig varme til det har fået lidt farve.",
+            "4. Tilsæt rød peberfrugt, kartofler og gulerod, og rist ved kraftig varme til grøntsagerne har fået lidt farve.",
+            "5. Tilsæt grønne bønner og forårsløg, og fortsæt ristningen ved kraftig varme til det har fået lidt farve, skru herefter ned for varmen.",
+            "6. Tilsæt kokosmælk, yoghurt, fiskesauce, sukker, salt, hvidløgsolie og hønsefond. Bland sammen og bring retten op til kogepunktet og lad den småkoge i ca 35 minutter under låg.",
+            "7. Kog basmati- eller jasminris som angivet på posen.",
+            "8. Rør en jævning af vand og maizena, tilsæt til retten og kog yderligere 2-3 minutter.",
+            "9. Hak peanuts til crunch og skær lime i både til servering."
+        ],
+        "ingredients": [
+            {
+                "name": "karry",
+                "quantity": 1.5,
+                "unit": "tsk",
+                "quantityString": "1.5 tsk"
+            },
+            {
+                "name": "paprika",
+                "quantity": 1,
+                "unit": "tsk",
+                "quantityString": "1 tsk"
+            },
+            {
+                "name": "garam masala",
+                "quantity": 1,
+                "unit": "spsk",
+                "quantityString": "1 spsk"
+            },
+            {
+                "name": "smør",
+                "quantity": 80,
+                "unit": "g",
+                "quantityString": "80 g"
+            },
+            {
+                "name": "kyllingebryst",
+                "quantity": 650,
+                "unit": "g",
+                "quantityString": "650 g"
+            },
+            {
+                "name": "chili",
+                "quantity": 1,
+                "unit": "stk",
+                "quantityString": "1 stk"
+            },
+            {
+                "name": "ingefær"
+            },
+            {
+                "name": "rød peberfrugt",
+                "quantity": 1,
+                "unit": "stk",
+                "quantityString": "1 stk"
+            },
+            {
+                "name": "kartofler",
+                "quantity": 4,
+                "unit": "stk",
+                "quantityString": "4 stk"
+            },
+            {
+                "name": "gulerod",
+                "quantity": 3,
+                "unit": "stk",
+                "quantityString": "3 stk"
+            },
+            {
+                "name": "grønne bønner",
+                "quantity": 200,
+                "unit": "g",
+                "quantityString": "200 g"
+            },
+            {
+                "name": "forårsløg",
+                "quantity": 4,
+                "unit": "stk",
+                "quantityString": "4 stk"
+            },
+            {
+                "name": "kokosmælk",
+                "quantity": 1,
+                "unit": "ds",
+                "quantityString": "1 ds"
+            },
+            {
+                "name": "yoghurt naturel",
+                "quantity": 1.5,
+                "unit": "dl",
+                "quantityString": "1.5 dl"
+            },
+            {
+                "name": "fiskesauce",
+                "quantity": 1.5,
+                "unit": "tsk",
+                "quantityString": "1.5 tsk"
+            },
+            {
+                "name": "rørsukker",
+                "quantity": 2,
+                "unit": "spsk",
+                "quantityString": "2 spsk"
+            },
+            {
+                "name": "salt",
+                "quantity": 2.5,
+                "unit": "tsk",
+                "quantityString": "2.5 tsk"
+            },
+            {
+                "name": "hvidløgsolie",
+                "quantity": 1.5,
+                "unit": "tsk",
+                "quantityString": "1.5 tsk"
+            },
+            {
+                "name": "hønsefond"
+            },
+            {
+                "name": "maizena",
+                "quantity": 1,
+                "unit": "spsk",
+                "quantityString": "1 spsk"
+            },
+            {
+                "name": "lime"
+            },
+            {
+                "name": "saltede peanuts"
+            }
+        ],
+        "servings": 6,
+        "mealType": "Hovedret",
+        "fullMeal": true,
+        "calories": 0,
+        "timeToCook": 75,
+        "comments": "Serveres med basmati-ris, peanut-crunch og frisk lime. Retten er inspireret af både thailandsk og indisk køkken, og er krydret men ikke stærk. Ingefær kan udelades. Halv til hel chili. Lidt koncentreret hønsefond. Gerne stærk paprika.",
+        "source": "Hjorth.com",
+        "tried": false
     }
 ]
