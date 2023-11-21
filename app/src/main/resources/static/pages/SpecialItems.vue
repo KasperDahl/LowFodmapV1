@@ -1,102 +1,52 @@
-<!-- <template>
-    <div>
-      <h1>Special Items</h1>     
-    </div>
-    <div>
-        <ul>
-            <li v-for="specialItem in specialItems" :key="specialItem.name">
-                {{ specialItem.name }}
-            </li>
-        </ul>
-    </div>
-    <div>
-        <button>Get all Special Items</button>
-    </div>
-</template> -->
-<!-- <template>
-  <div>
-    <h1>Special Items</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Brand</th>
-          <th>Size</th>
-          <th>Category</th>
-          <th>Shop</th>
-          <th>Price</th>
-          <th>Note</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="specialItem in specialItems" :key="specialItem.name">
-          <td>{{ specialItem.name }}</td>
-          <td>{{ specialItem.brand }}</td>
-          <td>{{ specialItem.size }}</td>
-          <td>{{ specialItem.category }}</td>
-          <td>
-            <select v-model="specialItem.selectedShop">
-              <option v-for="shop in specialItem.shop" :key="shop" :value="shop">{{ shop }}</option>
-            </select>
-          </td>
-          <td>
-            <select v-model="specialItem.selectedPrice">
-              <option v-for="price in specialItem.price" :key="price" :value="price">{{ price }}</option>
-            </select>
-          </td>
-          <td>{{ specialItem.note }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</template> -->
-
 <template>
   <div>
-    <h1>Special Items</h1>
-    <div class="table-responsive">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th @click="sortTable('name')">Name</th>
-          <th @click="sortTable('brand')">Brand</th>
-          <th @click="sortTable('size')">Size</th>
-          <th @click="sortTable('category')">Category</th>
-          <th @click="sortTable('shopPrice')">Shop&Price</th>
-          <th>Note</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="specialItem in sortedSpecialItems" :key="specialItem.name">
-          <td>{{ specialItem.name }}</td>
-          <td>{{ specialItem.brand }}</td>
-          <td>{{ specialItem.size }}</td>
-          <td>{{ specialItem.category }}</td>
-          <td>
-            <select v-model="specialItem.selectedShopPrice" @change="syncDropdowns('shopPrice', specialItem)">
-              <option v-for="shopPrice in specialItem.shopPrice" :key="shopPrice" :value="shopPrice">{{ shopPrice }}</option>
-            </select>
-          </td>
-<!--           <td>
-            <select v-model="specialItem.selectedShop" @change="syncDropdowns('shop', specialItem)">
-              <option v-for="shop in specialItem.shop" :key="shop" :value="shop">{{ shop }}</option>
-            </select>
-          </td>
-          <td>
-            <select v-model="specialItem.selectedPrice" @change="syncDropdowns('price', specialItem)">
-              <option v-for="price in specialItem.price" :key="price" :value="price">{{ price }}</option>
-            </select>
-          </td> -->
-          <td>{{ specialItem.note }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="d-flex justify-content-between align-items-center">
+      <h1>Special Items</h1>
+      <button class="btn btn-primary" @click="showForm = !showForm" >Add Item</button>
+    </div>
+    <form v-show="showForm" @submit.prevent="addItem">
+    <input v-model="newItem.name" placeholder="Name">
+    <input v-model="newItem.brand" placeholder="Brand">
+    <input v-model="newItem.size" placeholder="Size">
+    <input v-model="newItem.category" placeholder="Category">
+    <input v-model="newItem.shop" placeholder="Shop">
+    <input v-model="newItem.price" placeholder="Price">
+    <input v-model="newItem.note" placeholder="Note">
+    <button type="submit">OK</button>
+  </form>
+      <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th @click="sortTable('name')">Name</th>
+            <th @click="sortTable('brand')">Brand</th>
+            <th @click="sortTable('size')">Size</th>
+            <th @click="sortTable('category')">Category</th>
+            <th @click="sortTable('shopPrice')">Shop&Price</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="specialItem in sortedSpecialItems" :key="specialItem.name">
+            <td>{{ specialItem.name }}</td>
+            <td>{{ specialItem.brand }}</td>
+            <td>{{ specialItem.size }}</td>
+            <td>{{ specialItem.category }}</td>
+            <td>
+              <select v-model="specialItem.selectedShopPrice" @change="syncDropdowns('shopPrice', specialItem)">
+                <option v-for="shopPrice in specialItem.shopPrice" :key="shopPrice" :value="shopPrice">{{ shopPrice }}</option>
+              </select>
+            </td>
+
+            <td>{{ specialItem.note }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
-
 <script>
-import { ref, computed, watch } from 'vue';
+// import { ref, computed, watch } from 'vue';
 
 export default {
   data() {
@@ -104,6 +54,18 @@ export default {
       specialItems: [],
       sortColumn: '',
       sortOrder: 'asc',
+
+      showForm: false,
+      newItem: {
+        name: '',
+        brand: '',
+        size: '',
+        category: '',
+        shop: '',
+        price: '',
+        note: '',
+      },
+
     };
   },
   created() {
@@ -141,6 +103,28 @@ export default {
         }
       });
     },
+
+    async addItem() {
+      const response = await fetch('api-url', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(this.newItem),
+      });
+      if (response.ok) {
+        this.showForm = false;
+        this.newItem = {
+          name: '',
+          brand: '',
+          size: '',
+          category: '',
+          shop: '',
+          price: '',
+          note: '',
+        };
+      }
+    },
+
+
   },
   computed: {
     // This computed property is used to sort the special items by the given column and order.
@@ -161,28 +145,3 @@ export default {
   },
 };
 </script>
-
-<!-- <script>
-export default {
-  data() {
-    return {
-      specialItems: [],
-    };
-  },
-  created() {
-    this.fetchSpecialItems();
-  },
-  methods: {
-    // This method is used to fetch all special items from the server.
-    // It is called when the page is loaded.
-    fetchSpecialItems() {
-      fetch("/api/specialitems")
-        .then((response) => response.json())
-        .then((data) => {
-          this.specialItems = data;
-        });
-    },
-  },
-};
-</script> -->
-
