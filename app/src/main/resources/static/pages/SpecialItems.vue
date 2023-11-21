@@ -105,9 +105,16 @@ export default {
     },
 
     async addItem() {
-      const response = await fetch('api-url', {
+      const username = 'kasper';
+      const password = 'admin';
+      const token = btoa(`${username}:${password}`);
+
+      const response = await fetch('/api/specialitems', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+        //  'Authorization': `Basic ${token}`
+        },
         body: JSON.stringify(this.newItem),
       });
       if (response.ok) {
