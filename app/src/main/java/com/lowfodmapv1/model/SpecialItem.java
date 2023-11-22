@@ -5,18 +5,33 @@ import java.util.ArrayList;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 // This class represents a single special item with properties like name, brand, category, shop, price, and note.
 @Document(collection = "SpecialItem")
 public class SpecialItem {
     @Id
     private String id;
+
+    @Field("name")
     private String name;
+
+    @Field("brand")
     private String brand;
+
+    @Field("size")
     private String size;
+
+    @Field("category")
     private String category;
+
+    @Field("shop")
     private ArrayList<String> shop;
+
+    @Field("price")
     private ArrayList<BigDecimal> price;
+
+    @Field("note")
     private String note;
 
     // Default constructor

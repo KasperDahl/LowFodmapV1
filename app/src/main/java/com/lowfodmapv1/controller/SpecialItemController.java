@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lowfodmapv1.model.SpecialItem;
 import com.lowfodmapv1.service.impl.SpecialItemServiceImpl;
+import com.lowfodmapv1.service.interfaces.SpecialItemService;
 
 @RestController
 @RequestMapping("/api/specialitems")
@@ -20,7 +22,7 @@ import com.lowfodmapv1.service.impl.SpecialItemServiceImpl;
 // It is annotated with @RestController and @RequestMapping to indicate that it
 // is a controller class.
 public class SpecialItemController {
-    private final SpecialItemServiceImpl specialItemService;
+    private final SpecialItemService specialItemService;
 
     @Autowired
     public SpecialItemController(SpecialItemServiceImpl specialItemService) {
@@ -50,7 +52,7 @@ public class SpecialItemController {
     @PostMapping
     // This method creates a special item.
     // It is annotated with @PostMapping to indicate that it is a POST request.
-    public ResponseEntity<SpecialItem> createSpecialItem(SpecialItem specialItem) {
+    public ResponseEntity<SpecialItem> createSpecialItem(@RequestBody SpecialItem specialItem) {
         return ResponseEntity.ok(specialItemService.createSpecialItem(specialItem));
     }
 

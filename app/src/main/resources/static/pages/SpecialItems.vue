@@ -9,8 +9,10 @@
     <input v-model="newItem.brand" placeholder="Brand">
     <input v-model="newItem.size" placeholder="Size">
     <input v-model="newItem.category" placeholder="Category">
-    <input v-model="newItem.shop" placeholder="Shop">
-    <input v-model="newItem.price" placeholder="Price">
+<!--     <input v-model="newItem.shop" placeholder="Shop">
+    <input v-model="newItem.price" placeholder="Price"> -->
+    <input v-model="tempShop" placeholder="Shop">
+    <input v-model="tempPrice" placeholder="Price">
     <input v-model="newItem.note" placeholder="Note">
     <button type="submit">OK</button>
   </form>
@@ -61,10 +63,13 @@ export default {
         brand: '',
         size: '',
         category: '',
-        shop: '',
-        price: '',
+        shop: [],
+        price: [],
         note: '',
       },
+
+      tempShop: '',
+      tempPrice: '',
 
     };
   },
@@ -109,6 +114,9 @@ export default {
       const password = 'admin';
       const token = btoa(`${username}:${password}`);
 
+      if (this.tempShop) this.newItem.shop.push(this.tempShop);
+      if (this.tempPrice) this.newItem.price.push(parseFloat(this.tempPrice));
+
       const response = await fetch('/api/specialitems', {
         method: 'POST',
         headers: { 
@@ -118,7 +126,10 @@ export default {
         body: JSON.stringify(this.newItem),
       });
       if (response.ok) {
+        console.log('Item added');
         this.showForm = false;
+        this.tempShop = '';
+        this.tempPrice = '';
         this.newItem = {
           name: '',
           brand: '',
