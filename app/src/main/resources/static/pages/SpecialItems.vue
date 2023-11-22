@@ -110,18 +110,13 @@ export default {
     },
 
     async addItem() {
-      const username = 'kasper';
-      const password = 'admin';
-      const token = btoa(`${username}:${password}`);
-
       if (this.tempShop) this.newItem.shop.push(this.tempShop);
       if (this.tempPrice) this.newItem.price.push(parseFloat(this.tempPrice));
 
       const response = await fetch('/api/specialitems', {
         method: 'POST',
         headers: { 
-          'Content-Type': 'application/json',
-        //  'Authorization': `Basic ${token}`
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(this.newItem),
       });

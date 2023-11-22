@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -115,7 +114,8 @@ public class RecipeRepository {
      * @throws IOException If there is an issue reading or writing the file.
      */
     public void deleteRecipe(String name) throws IOException {
-        File file = Paths.get(RECIPES_JSON_FILE).toFile();
+        File file = new ClassPathResource(RECIPES_JSON_FILE).getFile();
+
         CollectionType listType = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Recipe.class);
 
         List<Recipe> recipes = objectMapper.readValue(file, listType);

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.lowfodmapv1.model.Recipe;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -32,8 +33,8 @@ import java.util.List;
 // Sets the base URL path for all endpoints in this controller
 @RequestMapping("/api/recipes")
 public class RecipeController {
-
-    private static final File FILE = new File("src/main/resources/recipes.json");
+    // This is the path relative to the resource folder (app\src\main\resources).
+    private static final String RECIPES_JSON_FILE = "recipes.json";
 
     // Automatically injects the RecipeRepository instance into the controller
     @Autowired
@@ -60,14 +61,14 @@ public class RecipeController {
     }
 
     // You would inject a service class here, but for now, let's just use a
-    // placeholder
-    // private RecipeService recipeService;
+    // placeholder method
     @PostMapping
-    public Recipe createRecipe(@RequestBody Recipe recipe) {
+    public Recipe createRecipe(@RequestBody Recipe recipe) throws IOException {
         // This is where you'd usually call a method in your service class to handle
         // saving the recipe
         // For now, we're just going to return the recipe as is
-        // return recipeService.saveRecipe(recipe);
+        File FILE = new ClassPathResource(RECIPES_JSON_FILE).getFile();
+
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
         List<Recipe> recipes;
