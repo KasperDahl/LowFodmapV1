@@ -22,7 +22,6 @@ public class IngredientRepository {
     // This is the path relative to the resource folder (app\src\main\resources).
     private static final String RECIPES_JSON_FILE = "recipes.json";
 
-    // private RecipeRepository recipeRepository;
     private ObjectMapper objectMapper;
 
     @Autowired
@@ -35,11 +34,15 @@ public class IngredientRepository {
      * Load all (unique) ingredient names from the JSON file.
      *
      * @return List of all (unique) ingredient names.
-     * @throws IOException If there is an issue reading the file.
+     * @throws IOException If an error occurs reading the file.
      */
     public List<String> getAllIngredients() throws IOException {
-        // Get a File object for the recipes file
+        // Get a File object for the recipes file.
+        // Return empty list if it doesn't exist.
         File file = new ClassPathResource(RECIPES_JSON_FILE).getFile();
+        if (!file.exists()) {
+            return new ArrayList<>();
+        }
 
         // CollectionType for deserialization
         CollectionType listType = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Recipe.class);

@@ -12,12 +12,12 @@ public class RecipeRepositoryTest {
         RecipeRepository recipeRepository = new RecipeRepository();
 
         try {
-            List<Recipe> recipes = recipeRepository.loadRecipes();
+            List<Recipe> recipes = recipeRepository.getAllRecipes();
             System.out.println("Loaded recipes:");
             for (Recipe recipe : recipes) {
                 System.out.println(recipe);
-                //System.out.println(recipe.getName());
-                //System.out.println(recipe.getIngredients());
+                // System.out.println(recipe.getName());
+                // System.out.println(recipe.getIngredients());
             }
         } catch (IOException e) {
             System.out.println("Error loading recipes: " + e.getMessage());

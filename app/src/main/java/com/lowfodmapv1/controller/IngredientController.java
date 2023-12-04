@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/*
+ * This class display all the ingredients in the database at the
+ * /api/ingredients endpoint.
+ */
 @RestController
 @RequestMapping("/api/ingredients")
-// This class display all the ingredients in the database at the
-// /api/ingredients endpoint.
 public class IngredientController {
     private final IngredientService ingredientService;
 
@@ -23,8 +25,12 @@ public class IngredientController {
         this.ingredientService = ingredientService;
     }
 
+    /*
+     * Handles HTTP GET requests for the "/api/ingredients" endpoint.
+     * Returns a list of all ingredients in the database.
+     * If there are no ingredients, it returns a "No Content" status.
+     */
     @GetMapping
-    // This method returns all ingredients to the endpoint /api/ingredients.
     public ResponseEntity<List<String>> getAllIngredients() {
         try {
             List<String> ingredients = ingredientService.getAllIngredients();

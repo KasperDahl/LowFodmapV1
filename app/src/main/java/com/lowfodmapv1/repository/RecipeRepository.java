@@ -29,16 +29,15 @@ public class RecipeRepository {
     }
 
     /**
-     * Loads recipes from the JSON file.
+     * Loads all recipes from the JSON file.
      *
-     * @return List of Recipe objects.
+     * @return List of all Recipe objects.
      * @throws IOException If an error occurs reading the file.
      */
-    public List<Recipe> loadRecipes() throws IOException {
-        // Get a File object for the recipes file
+    public List<Recipe> getAllRecipes() throws IOException {
+        // Get a File object for the recipes file.
+        // Return empty list if it doesn't exist.
         File file = new ClassPathResource(RECIPES_JSON_FILE).getFile();
-
-        // If file doesn't exist, return empty list
         if (!file.exists()) {
             return new ArrayList<>();
         }

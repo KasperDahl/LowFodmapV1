@@ -1,11 +1,7 @@
 package com.lowfodmapv1.controller;
 
-/* 
- * This class serves as a REST API controller for recipe-related endpoints. 
- * It handles HTTP requests and sends responses to the frontend.
- */
-
 import com.lowfodmapv1.repository.RecipeRepository;
+import com.lowfodmapv1.service.interfaces.RecipeService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -28,33 +24,41 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-// Marks this class as a RESTful web service controller
+/*
+ * This class serves as a REST API controller for recipe-related endpoints.
+ * It handles HTTP requests and sends responses to the frontend via the base URL
+ * endpoint "/api/recipes".
+ */
 @RestController
-// Sets the base URL path for all endpoints in this controller
 @RequestMapping("/api/recipes")
 public class RecipeController {
     // This is the path relative to the resource folder (app\src\main\resources).
     private static final String RECIPES_JSON_FILE = "recipes.json";
 
-    // Automatically injects the RecipeRepository instance into the controller
+    private final RecipeService recipeService;
+
+    @Autowired
+    public RecipeController(RecipeService recipeService) {
+        this.recipeService = recipeService;
+    }
+
     @Autowired
     private RecipeRepository recipeRepository;
 
-    // Handles HTTP GET requests for the "/api/recipes" endpoint
+    /*
+     * Handles HTTP GET requests for the "/api/recipes" endpoint. Returns a list of
+     * all recipes in the database. If there are no recipes, it returns a
+     * "No Content" status.
+     */
     @GetMapping
     public ResponseEntity<List<Recipe>> getAllRecipes() {
         try {
-            // Load all recipes from the JSON file
-            List<Recipe> recipes = recipeRepository.loadRecipes();
-            // If the list of recipes is empty, return a "No Content" status
+            List<Recipe> recipes = recipeService.getAllRecipes();
             if (recipes.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
-            // If the list of recipes is not empty, return the list with an "OK" status
             return new ResponseEntity<>(recipes, HttpStatus.OK);
         } catch (IOException e) {
-            // If there's an issue reading the file, print the stack trace and return an
-            // "Internal Server Error" status
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }

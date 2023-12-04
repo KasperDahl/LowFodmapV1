@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lowfodmapv1.model.SpecialItem;
-import com.lowfodmapv1.service.impl.SpecialItemServiceImpl;
 import com.lowfodmapv1.service.interfaces.SpecialItemService;
 
 @RestController
@@ -25,7 +24,7 @@ public class SpecialItemController {
     private final SpecialItemService specialItemService;
 
     @Autowired
-    public SpecialItemController(SpecialItemServiceImpl specialItemService) {
+    public SpecialItemController(SpecialItemService specialItemService) {
         this.specialItemService = specialItemService;
     }
 
