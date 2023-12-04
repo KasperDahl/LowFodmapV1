@@ -11,8 +11,8 @@ import com.lowfodmapv1.repository.SpecialItemRepository;
 import com.lowfodmapv1.service.interfaces.SpecialItemService;
 
 @Service
-// This class is used to store special items in the database.
-// It is annotated with @Service to indicate that it is a service class.
+// This class implements the SpecialItemService and is used to store special
+// items in the database.
 public class SpecialItemServiceImpl implements SpecialItemService {
     private final SpecialItemRepository specialItemRepository;
 
