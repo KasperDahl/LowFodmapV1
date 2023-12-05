@@ -15,12 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class acts as an interface for accessing the recipes stored in the JSON
- * database.
- * The repository pattern allows you to separate the data access logic from the
- * application,
- * making it easier to switch between different storage methods (e.g., file,
- * database) in the future.
+ * Repository for the performing CRUD operations on the JSON file containing the
+ * recipes.
  */
 @Repository
 public class RecipeRepository {
@@ -40,19 +36,16 @@ public class RecipeRepository {
      * @throws IOException If an error occurs reading the file.
      */
     public List<Recipe> getAllRecipes() throws IOException {
-        // Get a File object for the recipes file.
-        // Return empty list if it doesn't exist.
         File FILE = new ClassPathResource(RECIPES_JSON_FILE).getFile();
         if (!FILE.exists()) {
             return new ArrayList<>();
         }
 
-        // Construct a CollectionType object representing a list of Recipe objects.
-        // This is required for Jackson to know what type to deserialize the JSON into.
+        // Constructs a CollectionType for a list of Recipe objects for JSON
+        // deserialization.
         CollectionType listType = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Recipe.class);
 
-        // Use Jackson to parse the JSON file into a list of Recipe objects.
-        // The readValue() method is called on the ObjectMapper object.
+        // Parses JSON file into Recipe objects list using Jackson's readValue().
         return objectMapper.readValue(FILE, listType);
     }
 
@@ -100,28 +93,25 @@ public class RecipeRepository {
      * @throws IOException If there is an issue reading or writing the file.
      */
     public void deleteRecipe(String name) throws IOException {
-        File file = new ClassPathResource(RECIPES_JSON_FILE).getFile();
+        File FILE = new ClassPathResource(RECIPES_JSON_FILE).getFile();
 
+        // Constructs a CollectionType for a list of Recipe objects for JSON
+        // deserialization.
         CollectionType listType = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Recipe.class);
 
-        List<Recipe> recipes = objectMapper.readValue(file, listType);
-
-        // Find the recipe to delete
+        // Find the recipe to delete from the original JSON file.
+        List<Recipe> recipes = objectMapper.readValue(FILE, listType);
         Recipe recipeToDelete = recipes.stream()
                 .filter(recipe -> recipe.getName().equals(name))
                 .findFirst()
                 .orElse(null);
 
-        // If the recipe is not found, throw an exception
         if (recipeToDelete == null) {
             throw new IOException("Recipe not found");
         }
 
-        // Remove the recipe from the list
+        // Remove the recipe from the list and write the updated list back to the file.
         recipes.remove(recipeToDelete);
-
-        // Write the updated list back to the file
-        objectMapper.writeValue(file, recipes);
+        objectMapper.writeValue(FILE, recipes);
     }
-
 }

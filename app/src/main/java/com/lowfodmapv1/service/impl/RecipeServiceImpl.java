@@ -47,8 +47,14 @@ public class RecipeServiceImpl implements RecipeService {
         return recipeRepository.createRecipe(recipe);
     }
 
-    public void deleteRecipe(String recipeName) {
-
+    /**
+     * Deletes a recipe by name.
+     * 
+     * @param recipeName The name of the recipe to delete.
+     * @throws IOException if an I/O error occurs while deleting the recipe.
+     */
+    public void deleteRecipe(String recipeName) throws IOException {
+        recipeRepository.deleteRecipe(recipeName);
     }
 
     /**

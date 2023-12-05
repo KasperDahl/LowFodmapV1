@@ -5,7 +5,10 @@ import java.util.Optional;
 
 import com.lowfodmapv1.model.SpecialItem;
 
-// This interface defines the methods that the SpecialItemServiceImpl class must implement.
+/**
+ * This interface defines the methods that the SpecialItemServiceImpl class must
+ * implement.
+ */
 public interface SpecialItemService {
     List<SpecialItem> getAllSpecialItems();
 

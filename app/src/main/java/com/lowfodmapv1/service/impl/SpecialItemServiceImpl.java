@@ -12,9 +12,11 @@ import com.lowfodmapv1.model.SpecialItem;
 import com.lowfodmapv1.repository.SpecialItemRepository;
 import com.lowfodmapv1.service.interfaces.SpecialItemService;
 
+/**
+ * This class implements the SpecialItemService and is used to store special
+ * items in the database.
+ */
 @Service
-// This class implements the SpecialItemService and is used to store special
-// items in the database.
 public class SpecialItemServiceImpl implements SpecialItemService {
     private final SpecialItemRepository specialItemRepository;
 
@@ -24,23 +26,35 @@ public class SpecialItemServiceImpl implements SpecialItemService {
     }
 
     // This method returns all special items.
+    /**
+     * Returns the sorted list of all special items.
+     * 
+     * @return List of all special items.
+     */
     public List<SpecialItem> getAllSpecialItems() {
         List<SpecialItem> allSpecialItems = specialItemRepository.findAll();
         return sortSpecialItemsByName(allSpecialItems);
-        // return specialItemRepository.findAll();
-    }
-
-    // This method returns a special item by its id.
-    public Optional<SpecialItem> getSpecialItemById(String id) {
-        return specialItemRepository.findById(id);
     }
 
     // This method creates a special item.
+    /**
+     * Creates a new special item.
+     * 
+     * @param specialItem The special item to create.
+     * @return The created special item.
+     */
     public SpecialItem createSpecialItem(SpecialItem specialItem) {
         return specialItemRepository.save(specialItem);
     }
 
-    // This method updates a special item.
+    // This method has not been tested yet, neither has the method in the
+    // SpecialItemServiceController-class.
+    public Optional<SpecialItem> getSpecialItemById(String id) {
+        return specialItemRepository.findById(id);
+    }
+
+    // This method has not been tested yet, neither has the method in the
+    // SpecialItemServiceController-class.
     public Optional<SpecialItem> updateSpecialItem(String id, SpecialItem specialItem) {
         return specialItemRepository.findById(id)
                 .map(specialItemData -> {
@@ -54,7 +68,8 @@ public class SpecialItemServiceImpl implements SpecialItemService {
                 });
     }
 
-    // This method deletes a special item.
+    // This method has not been tested yet, neither has the method in the
+    // SpecialItemServiceController-class.
     public void deleteSpecialItem(String id) {
         specialItemRepository.deleteById(id);
     }
@@ -75,5 +90,4 @@ public class SpecialItemServiceImpl implements SpecialItemService {
         });
         return specialItems;
     }
-
 }

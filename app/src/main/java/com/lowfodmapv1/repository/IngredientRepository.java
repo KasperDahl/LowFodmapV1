@@ -28,7 +28,6 @@ public class IngredientRepository {
 
     @Autowired
     public IngredientRepository() {
-        // this.recipeRepository = new RecipeRepository();
         this.objectMapper = new ObjectMapper();
     }
 

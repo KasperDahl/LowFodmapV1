@@ -10,6 +10,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * Controller that just returns all the MealType enums values.
+ * For now it is kept here but should perhaps be combined with the
+ * UnitController and get a combined controller/service.
+ */
 @RestController
 @RequestMapping("/api/mealtypes")
 public class MealTypeController {
@@ -21,13 +26,3 @@ public class MealTypeController {
                 .collect(Collectors.toList());
     }
 }
-
-// @RestController
-// @RequestMapping("/api/mealtypes")
-// public class MealTypeController {
-
-// @GetMapping
-// public MealType[] getAll() {
-// return MealType.values();
-// }
-// }

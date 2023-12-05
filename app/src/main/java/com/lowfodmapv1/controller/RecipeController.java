@@ -1,6 +1,5 @@
 package com.lowfodmapv1.controller;
 
-import com.lowfodmapv1.repository.RecipeRepository;
 import com.lowfodmapv1.service.interfaces.RecipeService;
 import com.lowfodmapv1.model.Recipe;
 
@@ -33,9 +32,6 @@ public class RecipeController {
         this.recipeService = recipeService;
     }
 
-    @Autowired
-    private RecipeRepository recipeRepository;
-
     /**
      * Handles HTTP GET requests for the "/api/recipes" endpoint. Returns a list of
      * all recipes in the database. If there are no recipes, it returns a
@@ -58,7 +54,8 @@ public class RecipeController {
     }
 
     /**
-     * Creates a new recipe in the database. Returns the recipe that was created.
+     * Creates a new recipe in the database. Returns the recipe that was created and
+     * "Internal Server Error" status if an error occurs.
      * 
      * @param recipe
      * @return The recipe that was created.
@@ -75,20 +72,23 @@ public class RecipeController {
         }
     }
 
+    /**
+     * Handles HTTP DELETE requests for the "/api/recipes/{name}" endpoint. Deletes
+     * the recipe with the given name from the database. If the recipe is not found,
+     * it returns a "Not Found" status.
+     * 
+     * @param name
+     * @return "No Content" status if the recipe was deleted successfully, "Not
+     *         Found" status if the recipe was not found.
+     */
     @DeleteMapping("/{name}")
     public ResponseEntity<Void> deleteRecipe(@PathVariable String name) {
         try {
-            // Delete the recipe
-            recipeRepository.deleteRecipe(name);
-
-            // Return a "No Content" status to indicate successful deletion
+            recipeService.deleteRecipe(name);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (IOException e) {
-            // If there's an issue reading or writing the file, or the recipe is not found,
-            // print the stack trace and return an "Internal Server Error" status
             e.printStackTrace();
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-
 }

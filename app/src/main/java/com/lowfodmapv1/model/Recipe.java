@@ -3,11 +3,9 @@ package com.lowfodmapv1.model;
 import java.util.Collections;
 import java.util.List;
 
-/* 
-This class represents a single recipe with properties like name, instructions, 
-ingredients, servings, mealType, fullmMal, calories, timeToCook, and comments.
+/**
+ * Model class for a recipe.
  */
-
 public class Recipe {
     private String name;
     private List<String> instructions;

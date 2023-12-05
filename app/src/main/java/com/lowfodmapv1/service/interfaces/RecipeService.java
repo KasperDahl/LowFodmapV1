@@ -14,5 +14,5 @@ public interface RecipeService {
 
     Recipe createRecipe(Recipe recipe) throws IOException;
 
-    void deleteRecipe(String recipeName);
+    void deleteRecipe(String recipeName) throws IOException;
 }

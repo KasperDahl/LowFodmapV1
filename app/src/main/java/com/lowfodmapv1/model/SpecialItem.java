@@ -7,7 +7,10 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-// This class represents a single special item with properties like name, brand, category, shop, price, and note.
+/**
+ * This class is the model for the SpecialItem object. The @Document annotation
+ * is used to indicate the name of the collection in the database.
+ */
 @Document(collection = "SpecialItem")
 public class SpecialItem {
     @Id
@@ -107,7 +110,11 @@ public class SpecialItem {
         this.note = note;
     }
 
-    // toString method for easy logging
+    /**
+     * Returns a string representation of the special item. Useful for debugging.
+     * 
+     * @return String representation of the special item.
+     */
     @Override
     public String toString() {
         return "SpecialItems [id=" + id + ", name=" + name + ", brand=" + brand + ", size" + size + ", category="

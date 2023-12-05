@@ -10,6 +10,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * Controller that just returns all the Unit enums values.
+ * For now it is kept here but should perhaps be combined with the
+ * MealTypeController and get a combined controller/service.
+ */
 @RestController
 @RequestMapping("/api/units")
 public class UnitController {
