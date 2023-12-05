@@ -1,7 +1,9 @@
 package com.lowfodmapv1.repository;
 
 import com.lowfodmapv1.model.Recipe;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.type.CollectionType;
 
 import org.springframework.core.io.ClassPathResource;
@@ -12,15 +14,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/* 
-This class acts as an interface for accessing the recipes stored in the JSON database. 
-The repository pattern allows you to separate the data access logic from the application, 
-making it easier to switch between different storage methods (e.g., file, database) in the future.
+/**
+ * This class acts as an interface for accessing the recipes stored in the JSON
+ * database.
+ * The repository pattern allows you to separate the data access logic from the
+ * application,
+ * making it easier to switch between different storage methods (e.g., file,
+ * database) in the future.
  */
 @Repository
 public class RecipeRepository {
     // This is the path relative to the resource folder (app\src\main\resources).
-    private static final String RECIPES_JSON_FILE = "recipes.json";
+    private static String RECIPES_JSON_FILE = "recipes.json";
 
     private ObjectMapper objectMapper;
 
@@ -37,8 +42,8 @@ public class RecipeRepository {
     public List<Recipe> getAllRecipes() throws IOException {
         // Get a File object for the recipes file.
         // Return empty list if it doesn't exist.
-        File file = new ClassPathResource(RECIPES_JSON_FILE).getFile();
-        if (!file.exists()) {
+        File FILE = new ClassPathResource(RECIPES_JSON_FILE).getFile();
+        if (!FILE.exists()) {
             return new ArrayList<>();
         }
 
@@ -48,7 +53,34 @@ public class RecipeRepository {
 
         // Use Jackson to parse the JSON file into a list of Recipe objects.
         // The readValue() method is called on the ObjectMapper object.
-        return objectMapper.readValue(file, listType);
+        return objectMapper.readValue(FILE, listType);
+    }
+
+    /**
+     * Creates a new recipe and saves it to the JSON file.
+     * 
+     * @param recipe
+     * @return The created recipe.
+     * @throws IOException If an error occurs reading or writing the file.
+     */
+    public Recipe createRecipe(Recipe recipe) throws IOException {
+        File FILE = new ClassPathResource(RECIPES_JSON_FILE).getFile();
+        // Output the JSON with indentation for readability.
+        objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+        List<Recipe> recipes;
+
+        if (FILE.exists()) {
+            // Read the existing recipes from the file.
+            recipes = objectMapper.readValue(FILE, new TypeReference<List<Recipe>>() {
+            });
+        } else {
+            recipes = new ArrayList<>();
+        }
+        recipes.add(recipe);
+
+        // Write the updated recipe list back to the file.
+        objectMapper.writeValue(FILE, recipes);
+        return recipe;
     }
 
     /**

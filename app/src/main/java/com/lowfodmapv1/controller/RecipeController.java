@@ -2,13 +2,9 @@ package com.lowfodmapv1.controller;
 
 import com.lowfodmapv1.repository.RecipeRepository;
 import com.lowfodmapv1.service.interfaces.RecipeService;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.lowfodmapv1.model.Recipe;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,12 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
-/*
+/**
  * This class serves as a REST API controller for recipe-related endpoints.
  * It handles HTTP requests and sends responses to the frontend via the base URL
  * endpoint "/api/recipes".
@@ -32,9 +26,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/recipes")
 public class RecipeController {
-    // This is the path relative to the resource folder (app\src\main\resources).
-    private static final String RECIPES_JSON_FILE = "recipes.json";
-
     private final RecipeService recipeService;
 
     @Autowired
@@ -45,10 +36,12 @@ public class RecipeController {
     @Autowired
     private RecipeRepository recipeRepository;
 
-    /*
+    /**
      * Handles HTTP GET requests for the "/api/recipes" endpoint. Returns a list of
      * all recipes in the database. If there are no recipes, it returns a
      * "No Content" status.
+     * 
+     * @return List of all recipes in the database.
      */
     @GetMapping
     public ResponseEntity<List<Recipe>> getAllRecipes() {
@@ -64,40 +57,22 @@ public class RecipeController {
         }
     }
 
-    // You would inject a service class here, but for now, let's just use a
-    // placeholder method
+    /**
+     * Creates a new recipe in the database. Returns the recipe that was created.
+     * 
+     * @param recipe
+     * @return The recipe that was created.
+     * @throws IOException If an error occurs reading or writing the file.
+     */
     @PostMapping
-    public Recipe createRecipe(@RequestBody Recipe recipe) throws IOException {
-        // This is where you'd usually call a method in your service class to handle
-        // saving the recipe
-        // For now, we're just going to return the recipe as is
-        File FILE = new ClassPathResource(RECIPES_JSON_FILE).getFile();
-
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.enable(SerializationFeature.INDENT_OUTPUT);
-        List<Recipe> recipes;
-
+    public ResponseEntity<Recipe> createRecipe(@RequestBody Recipe recipe) throws IOException {
         try {
-            if (FILE.exists()) {
-                // Read existing recipes
-                recipes = mapper.readValue(FILE, new TypeReference<List<Recipe>>() {
-                });
-            } else {
-                // File doesn't exist, initialize an empty recipe list
-                recipes = new ArrayList<>();
-            }
-
-            // Add the new recipe
-            recipes.add(recipe);
-
-            // Write the updated list back to the file
-            mapper.writeValue(FILE, recipes);
-        } catch (IOException e) {
-            // Handle the exception
-            throw new RuntimeException("Could not open file " + FILE.getPath(), e);
+            recipeService.createRecipe(recipe);
+            return new ResponseEntity<>(recipe, HttpStatus.CREATED);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
-
-        return recipe;
     }
 
     @DeleteMapping("/{name}")

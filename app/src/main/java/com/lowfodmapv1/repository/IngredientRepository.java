@@ -12,11 +12,13 @@ import com.lowfodmapv1.model.Recipe;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Repository for loading ingredient names from the JSON file.
+ */
 @Repository
 public class IngredientRepository {
     // This is the path relative to the resource folder (app\src\main\resources).
@@ -50,20 +52,15 @@ public class IngredientRepository {
         // Parse JSON file into Recipe objects
         List<Recipe> recipes = objectMapper.readValue(file, listType);
 
-        // Initialize a set to store the unique ingredient names
-        Set<String> uniqueIngredientNames = new HashSet<>();
-
         // Iterate through each recipe and add each unique ingredient name to the set
+        Set<String> uniqueIngredientNames = new HashSet<>();
         for (Recipe recipe : recipes) {
             for (Ingredient ingredient : recipe.getIngredients()) {
                 uniqueIngredientNames.add(ingredient.getName());
             }
         }
 
-        // Convert the set to a list and sort it
         List<String> uniqueIngredientNamesList = new ArrayList<>(uniqueIngredientNames);
-        Collections.sort(uniqueIngredientNamesList);
-
         return uniqueIngredientNamesList;
     }
 }

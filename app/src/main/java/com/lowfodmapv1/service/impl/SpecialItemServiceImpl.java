@@ -1,5 +1,7 @@
 package com.lowfodmapv1.service.impl;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,7 +25,9 @@ public class SpecialItemServiceImpl implements SpecialItemService {
 
     // This method returns all special items.
     public List<SpecialItem> getAllSpecialItems() {
-        return specialItemRepository.findAll();
+        List<SpecialItem> allSpecialItems = specialItemRepository.findAll();
+        return sortSpecialItemsByName(allSpecialItems);
+        // return specialItemRepository.findAll();
     }
 
     // This method returns a special item by its id.
@@ -53,6 +57,23 @@ public class SpecialItemServiceImpl implements SpecialItemService {
     // This method deletes a special item.
     public void deleteSpecialItem(String id) {
         specialItemRepository.deleteById(id);
+    }
+
+    /**
+     * Sorts special items by name.
+     * OBS! Maybe move this method closer to where the data is used (Vue.js)
+     * 
+     * @param specialItems
+     * @return List of sorted special items.
+     */
+    public List<SpecialItem> sortSpecialItemsByName(List<SpecialItem> specialItems) {
+        Collections.sort(specialItems, new Comparator<SpecialItem>() {
+            @Override
+            public int compare(SpecialItem s1, SpecialItem s2) {
+                return s1.getName().compareTo(s2.getName());
+            }
+        });
+        return specialItems;
     }
 
 }
